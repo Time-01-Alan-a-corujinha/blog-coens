@@ -39,4 +39,4 @@ Isso iniciará o servidor de desenvolvimento em `http://localhost:4200/`, onde v
 ## Contato
 Se você tiver dúvidas ou precisar de ajuda relacionada a este projeto, sinta-se à vontade para entrar em contato com a equipe de desenvolvimento em alanacurujinhat@gmail.com.
 
-Esperamos que este novo site seja uma melhoria significativa em relação ao site antigo e que ele atenda às necessidades de todos os envolvidos no curso. Obrigado por contribuir para o sucesso deste projeto!
+Esperamos que este novo site seja uma melhoria significativa em relação ao site antigo e que ele atenda às necessidades de todos os envolvidos no curso. Obrigado por contribuir para o sucesso deste projeto!!
