@@ -1,31 +1,42 @@
-# BlogCoens
+# Front-End COENS - Novo Site para Curso
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.11.
+Este repositório contém o código-fonte do novo site para o nosso curso, desenvolvido com o objetivo de melhorar a organização, acessibilidade e manutenção em comparação com o site anterior. O novo site será uma ferramenta valiosa para estudantes, administradores e professores, facilitando o acesso às informações do curso e a divulgação de atualizações e novidades.
 
-## Development server
-test
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Tecnologias Utilizadas
+- Angular 13: O framework Angular foi escolhido devido à sua capacidade de criar aplicações web robustas e escaláveis.
+- npm (Node Package Manager): Utilizado para gerenciar as dependências do projeto.
 
-## Code scaffolding
+## Instalação
+Para configurar o ambiente de desenvolvimento e instalar as dependências necessárias, siga os passos abaixo:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Clone este repositório para o seu ambiente local:
 
-## Build
+```bash
+git clone https://github.com/Time-01-Alan-a-corujinha/blog-coens.git
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+2. Navegue até a pasta do projeto:
 
-## Running unit tests
+```bash
+cd blog-coens
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+3. Execute o comando a seguir para instalar todas as dependências:
 
-## Running end-to-end tests
+```bash
+npm install
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Executando o Projeto
+Após a instalação das dependências, você pode iniciar o servidor de desenvolvimento com o seguinte comando:
 
-## Further help
+```bash
+ng serve
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Isso iniciará o servidor de desenvolvimento em `http://localhost:4200/`, onde você poderá visualizar o site e fazer alterações.
 
+## Contato
+Se você tiver dúvidas ou precisar de ajuda relacionada a este projeto, sinta-se à vontade para entrar em contato com a equipe de desenvolvimento em alanacurujinhat@gmail.com.
 
-Teste jira
-Teste Vercel
+Esperamos que este novo site seja uma melhoria significativa em relação ao site antigo e que ele atenda às necessidades de todos os envolvidos no curso. Obrigado por contribuir para o sucesso deste projeto!
