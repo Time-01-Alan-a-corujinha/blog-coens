@@ -1,0 +1,29 @@
+<div class="p-3">
+    <div class="icones">
+        <button mat-button [matMenuTriggerFor]="menu" (mouseenter)="openMenu()" class="btn btn-block p-0"><mat-icon>menu</mat-icon></button>
+        <button class="btn btn-block p-0"><mat-icon>person</mat-icon></button>
+    </div>
+    <div class="logos">
+        <img src="assets/logo.png" alt="logo" style="width: 8vw; max-width: 65px;">
+        <img src="assets/logo-2.png" alt="logo" style="width: 80vw; max-width: 600px; margin-top: -15px;">
+    </div>
+</div>
+<router-outlet></router-outlet>
+
+<mat-menu #menu="matMenu" class="menu-box">
+    <button mat-menu-item routerLink="">INÍCIO</button>
+    <button mat-menu-item>CURSOS</button>
+    <button mat-menu-item [matMenuTriggerFor]="noticias">NOTÍCIAS</button>
+    <button mat-menu-item>COENS</button>
+    <button mat-menu-item>PÓS-GRADUAÇÃO</button>
+    <button mat-menu-item>ATIVIDADES E PRODUÇÃO</button>
+    <button mat-menu-item>SISTEMAS</button>
+    <button mat-menu-item>OUTROS</button>
+    <button mat-menu-item>CONHEÇA O ALAN</button>
+  </mat-menu>
+  
+  <mat-menu #noticias="matMenu" class="menu-box">
+    <button mat-menu-item routerLink="noticias">RECENTES</button>
+    <button mat-menu-item>MEUS POSTS</button>
+    <button mat-menu-item>ADMINISTRADOR</button>
+  </mat-menu>

@@ -1,0 +1,26 @@
+.icones {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icones * {
+    border-width: 0px;
+}
+
+.logos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -15px;
+}
+
+::ng-deep .menu-box {
+    background: linear-gradient(#EBE6E6, #ffffff00);
+    box-shadow: none;
+}
+
+::ng-deep .menu-box button {
+    color: #841A1E;
+    font-size: 18px;
+    font-family: 'Kreon', sans-serif;
+}
