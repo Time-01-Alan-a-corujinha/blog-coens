@@ -9,13 +9,15 @@ import { NoticiasComponent } from './pages/noticias/noticias.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
+import { BoxtextComponent } from './components/boxtext/boxtext.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InicioComponent,
     NoticiasComponent,
-    MenuComponent
+    MenuComponent,
+    BoxtextComponent
   ],
   imports: [
     BrowserModule,
