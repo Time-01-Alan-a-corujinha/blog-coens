@@ -1,7 +1,7 @@
 <div class="p-3">
     <div class="icones">
         <button mat-button [matMenuTriggerFor]="menu" (mouseenter)="openMenu()" class="btn btn-block p-0"><mat-icon>menu</mat-icon></button>
-        <button class="btn btn-block p-0"><mat-icon>person</mat-icon></button>
+        <button mat-button [matMenuTriggerFor]="perfil" class="btn btn-block p-0"><mat-icon>person</mat-icon></button>
     </div>
     <div class="logos">
         <img src="assets/logo.png" alt="logo" style="width: 8vw; max-width: 65px;">
@@ -20,10 +20,15 @@
     <button mat-menu-item>SISTEMAS</button>
     <button mat-menu-item>OUTROS</button>
     <button mat-menu-item>CONHEÇA O ALAN</button>
-  </mat-menu>
-  
-  <mat-menu #noticias="matMenu" class="menu-box">
+</mat-menu>
+
+<mat-menu #noticias="matMenu" class="menu-box">
     <button mat-menu-item routerLink="noticias">RECENTES</button>
     <button mat-menu-item>MEUS POSTS</button>
     <button mat-menu-item>ADMINISTRADOR</button>
-  </mat-menu>
+</mat-menu>
+
+<mat-menu #perfil="matMenu" class="menu-box">
+    <button mat-menu-item>MEU PERFIL</button>
+    <button mat-menu-item>SAIR</button>
+</mat-menu>
