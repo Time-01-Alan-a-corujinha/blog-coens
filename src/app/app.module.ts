@@ -11,6 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { LoginComponent } from './pages/login/login.component';
 import { InputCustomComponent } from './components/input-custom/input-custom.component';
+import { BoxtextComponent } from './components/boxtext/boxtext.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { InputCustomComponent } from './components/input-custom/input-custom.com
     NoticiasComponent,
     MenuComponent,
     LoginComponent,
-    InputCustomComponent
+    InputCustomComponent,
+    BoxtextComponent
   ],
   imports: [
     BrowserModule,
