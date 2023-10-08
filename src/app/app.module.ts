@@ -9,6 +9,8 @@ import { NoticiasComponent } from './pages/noticias/noticias.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
+import { LoginComponent } from './pages/login/login.component';
+import { InputCustomComponent } from './components/input-custom/input-custom.component';
 import { BoxtextComponent } from './components/boxtext/boxtext.component';
 
 @NgModule({
@@ -17,6 +19,8 @@ import { BoxtextComponent } from './components/boxtext/boxtext.component';
     InicioComponent,
     NoticiasComponent,
     MenuComponent,
+    LoginComponent,
+    InputCustomComponent,
     BoxtextComponent
   ],
   imports: [

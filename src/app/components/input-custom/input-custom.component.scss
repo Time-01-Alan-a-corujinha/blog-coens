@@ -1,0 +1,32 @@
+span {
+    font-family: 'Kreon', sans-serif;
+    font-size: 18px;
+    color: #841A1E;
+}
+
+button {
+    transform: scale(1.4);
+    color: #959494;
+}
+
+input {
+    background-color: #d9d9d9;
+    min-height: 45px;
+    border-radius: 20px;
+    padding-left: 15px;
+    width: 70vw;
+    max-width: 500px;
+}
+
+.form-control:focus {
+    background-color: #d9d9d9;
+}
+
+.visible {
+    left: -50px;
+    position: relative;
+    align-items: center;
+    display: flex;
+    width: 0;
+    border: none
+}
