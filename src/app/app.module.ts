@@ -12,6 +12,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { LoginComponent } from './pages/login/login.component';
 import { InputCustomComponent } from './components/input-custom/input-custom.component';
 import { BoxtextComponent } from './components/boxtext/boxtext.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { BoxtextComponent } from './components/boxtext/boxtext.component';
     MenuComponent,
     LoginComponent,
     InputCustomComponent,
-    BoxtextComponent
+    BoxtextComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
