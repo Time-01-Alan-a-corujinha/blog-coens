@@ -2,26 +2,26 @@
     <link href="boxtext.component.scss" rel="stylesheet"/>
     <div>
         <div id="icones">
-            <button id="button_attach_file">
+            <button id="button_attach_file" onclick="buttonattach()">
                 <mat-icon>attach_file</mat-icon>
             </button>
-            <button id="button_format_align_left">
+            <button id="button_format_align_left" onclick="buttonaleft()">
                 <mat-icon>format_align_left</mat-icon>
             </button>
-            <button id="button_format_align_center">
+            <button id="button_format_align_center" onclick="buttonacenter()">
                 <mat-icon>format_align_center</mat-icon>
             </button>
-            <button id="button_format_align_justify">
+            <button id="button_format_align_justify" onclick="buttonajustify()">
                 <mat-icon>button_format_align_justify</mat-icon>
             </button>
-            <button id="button_format_align_right">
+            <button id="button_format_align_right" onclick="buttonaright()">
                 <mat-icon>format_align_right</mat-icon>
             </button>
-            <button id="button_format_bold">
+            <button id="button_format_bold" onclick="buttonbold()">
                 <mat-icon>format_bold</mat-icon>
             </button>
-            <button id="button_format_italic">
-                <mat-icon> format_italic</mat-icon>
+            <button id="button_format_italic" onclick="buttonitalic()">
+                format_italic
             </button>
         </div>
         <div id="title_post">
@@ -33,6 +33,28 @@
         <div id="publicar-salvar">
             <button id="publish-button">PUBLICAR</button>
             <button id="save-button">SALVAR</button>
+            <script>
+                const editor = document.getElementById('textarea_p')
+
+                function buttonaleft(){
+                    editor.style.textAlign = 'left';
+                }
+                function buttonacenter(){
+                    editor.style.textAlign = 'center';
+                }
+                function buttonajustify(){
+                    editor.style.textAlign = 'justify';
+                }
+                function buttonaright(){
+                    editor.style.textAlign = 'right';
+                }
+                function buttonbold(){
+                    
+                }
+                function buttonitalic(){
+                    
+                }
+            </script>
         </div>
     </div>
 </html>
