@@ -2,11 +2,14 @@
     min-height: 100vh;
 }
 
+.geral {
+    justify-content: space-between;
+}
+
 .geral, .logos {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
 }
 
 .campos {
@@ -23,6 +26,7 @@
 
 .rounded-circle mat-icon {
     top: 2px;
+    right: 2px;
     position: relative;
 }
 
@@ -45,4 +49,13 @@ span {
     font-family: 'Kreon', sans-serif;
     font-size: 18px;
     color: #841A1E;
+}
+
+.logos, .campos {
+    flex: 1;
+}
+
+.spacer {
+    flex: 3;
+    min-height: 150px;
 }
