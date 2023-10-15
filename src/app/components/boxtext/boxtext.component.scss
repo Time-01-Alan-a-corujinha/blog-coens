@@ -1,14 +1,14 @@
 body{
-    background-color: #EBE6E6;
-    margin: 20px 80px 20px 80px;
+    background-color: #ebe6e600;
+    margin-top:80px;
+    margin-bottom:20px;
+    margin-left:20px;
+    margin-right:20px;
     //rgba(255, 255, 255, 0.5)
 }
-.icones {
-    display: flex;
-    justify-content: space-between;
-    border-width: 0px;
-}
+
 #title_p{
+    font-family: kreon;
     float: right;
     border-radius: 25px;
     padding: 6px;
@@ -18,12 +18,14 @@ body{
     resize: none;
     border: none;
     size: auto;
+    color: #841A1E;
+    font-size: 18px;
 
     &::placeholder {
         font-family: kreon;
         color: #841A1E;
         font-weight: 900;
-        font-size: 16px;
+        font-size: 20px;
         text-align: center;
         padding-top: 3px;
     }
@@ -49,24 +51,38 @@ body{
 #button_attach_file {
     float: left;
     width: 5%;
+    border-width: 0px;
+    background-color: #ebe6e600;
 }#button_format_align_left {
     float: left;
     width: 5%;
+    border-width: 0px;
+    background-color: #ebe6e600;
 }#button_format_align_center {
     float: left;
-    width: 5%
+    width: 5%;
+    border-width: 0px;
+    background-color: #ebe6e600;
 }#button_format_align_justify {
     float: left;
     width: 5%;
+    border-width: 0px;
+    background-color: #ebe6e600;
 }#button_format_align_right {
     float: left;
     width: 5%;
+    border-width: 0px;
+    background-color: #ebe6e600;
 }#button_format_bold {
     float: left;
     width: 5%;
+    border-width: 0px;
+    background-color: #ebe6e600;
 }#button_format_italic {
     float: left;
     width: 5%;
+    border-width: 0px;
+    background-color: #ebe6e600;
 }
 
 #publish-button{
