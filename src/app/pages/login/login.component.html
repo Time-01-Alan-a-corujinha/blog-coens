@@ -3,19 +3,45 @@
         <img src="assets/logo.png" alt="logo" style="width: 10vw; max-width: 65px;">
         <img src="assets/logo-2.png" alt="logo" style="width: 85vw; max-width: 600px; margin-top: -5px; width: 95vw;">
     </div>
-    <div class="campos">
-        <app-input-custom class="w-100" [titulo]="'USUÁRIO'" [icone]="'person'"></app-input-custom>
-        <app-input-custom class="w-100" [titulo]="'SENHA'" [icone]="'lock'" [tipoInput]="'password'"></app-input-custom>
-        <div class="final p-2">
-            <div class="esqueceu-senha">
-                <span>Esqueci a senha</span>
-                <span>Cadastro</span>
+
+    <div class="row col-lg-5 col-md-8 col-sm-8" *ngIf="telaAtual == 0">
+        <div class="col-12"><app-input-custom titulo="USUÁRIO" icone="person"></app-input-custom></div>
+        <div class="col-12"><app-input-custom titulo="SENHA" icone="lock" tipoInput="password"></app-input-custom></div>
+        <div class="final px-4 py-2">
+            <button type="button" class="btn btn-secondary rounded-circle" routerLink="../menu">
+                <mat-icon>chevron_right</mat-icon>
+            </button>
+            <div class="outras-opcoes">
+                <button (click)="telaAtual = 2">Esqueci a senha</button>
+                <button (click)="telaAtual = 1">Cadastro</button>
             </div>
-            <button type="button" class="btn btn-secondary rounded-circle">
+        </div>
+    </div>
+
+    <div class="col-lg-5 col-md-8 col-sm-8" *ngIf="telaAtual == 1">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12"><app-input-custom titulo="NOME COMPLETO"></app-input-custom></div>
+            <div class="col-lg-6 col-md-6 col-sm-12"><app-input-custom titulo="RA" tipoInput="number"></app-input-custom></div>
+        </div>
+        <div class="col-12"><app-input-custom titulo="E-MAIL" tipoInput="email"></app-input-custom></div>
+        <div class="col-12"><app-input-custom titulo="SENHA" tipoInput="password"></app-input-custom></div>
+        <div class="final p-2" style="float: right;">
+            <button type="button" class="btn btn-secondary rounded-circle" (click)="telaAtual = 0">
                 <mat-icon>chevron_right</mat-icon>
             </button>
         </div>
     </div>
-    <div class="spacer warning"></div>
+
+    <div class="row col-lg-5 col-md-8 col-sm-8" *ngIf="telaAtual == 2">
+        <div class="col-12"><app-input-custom titulo="USUÁRIO" icone="person"></app-input-custom></div>
+        <div class="col-12"><app-input-custom titulo="E-MAIL" icone="email" tipoInput="email"></app-input-custom></div>
+        <div class="final px-4 py-2" style="float: right;">
+            <button type="button" class="btn btn-secondary rounded-circle" (click)="telaAtual = 0">
+                <mat-icon>chevron_right</mat-icon>
+            </button>
+        </div>
+    </div>
+    
+    <div class="spacer"></div>
     <app-footer></app-footer>
 </div>

@@ -1,10 +1,11 @@
 <div class="m-2">
-    <span class="mx-5">{{titulo}}</span>
+    <span [ngClass]="icone ? 'mx-5' : ''">{{titulo}}</span>
     <div class="d-flex">
-        <button class="btn btn-block p-0 mx-2" style="pointer-events: none;">
+        <button *ngIf="icone" class="btn btn-block p-0 mx-2" style="pointer-events: none;">
             <mat-icon>{{icone}}</mat-icon>
         </button>
-        <input type="{{tipoInput !== 'password' ? 'text' : hide ? 'password' : 'text'}}" class="form-control">
+        <input class="form-control"
+            type="{{tipoInput == 'password' ? hide ? 'password' : 'text' : tipoInput}}">
         <button class="btn btn-block p-0 visible" *ngIf="tipoInput == 'password'" (click)="hide = !hide">
             <mat-icon>{{hide ? 'visibility_off' : 'visibility_on'}}</mat-icon>
         </button>

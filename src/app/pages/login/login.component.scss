@@ -1,9 +1,37 @@
 .geral {
     min-height: 100vh;
-}
-
-.geral {
     justify-content: space-between;
+    
+    .logos{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .final{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .spacer {
+        flex: 3;
+        min-height: 150px;
+    }
+    
+    .rounded-circle {
+        max-width: 45px;
+        max-height: 45px;
+    }
+    
+    .rounded-circle mat-icon {
+        top: 2px;
+        right: 2px;
+        position: relative;
+    }
 }
 
 .geral, .logos {
@@ -12,50 +40,20 @@
     align-items: center;
 }
 
-.campos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+.final {        
+    .outras-opcoes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-items: flex-start;
+        padding-left: 50px;
 
-.rounded-circle {
-    max-width: 45px;
-    max-height: 45px;
-}
-
-.rounded-circle mat-icon {
-    top: 2px;
-    right: 2px;
-    position: relative;
-}
-
-.final {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.esqueceu-senha {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    align-items: flex-start;
-    padding-left: 50px;
-}
-
-span {
-    font-family: 'Kreon', sans-serif;
-    font-size: 18px;
-    color: #841A1E;
-}
-
-.logos, .campos {
-    flex: 1;
-}
-
-.spacer {
-    flex: 3;
-    min-height: 150px;
+        button {
+            font-family: 'Kreon', sans-serif;
+            font-size: 18px;
+            color: #841A1E;
+            border: none;
+        }
+    }
 }
