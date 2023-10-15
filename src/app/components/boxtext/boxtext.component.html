@@ -1,38 +1,47 @@
-<html>
+<div class="body">
     <link href="boxtext.component.scss" rel="stylesheet"/>
     <div>
-        <div id="icones">
-            <button id="button_attach_file">
-                <mat-icon>attach_file</mat-icon>
-            </button>
-            <button id="button_format_align_left">
-                <mat-icon>format_align_left</mat-icon>
-            </button>
-            <button id="button_format_align_center">
-                <mat-icon>format_align_center</mat-icon>
-            </button>
-            <button id="button_format_align_justify">
-                <mat-icon>button_format_align_justify</mat-icon>
-            </button>
-            <button id="button_format_align_right">
-                <mat-icon>format_align_right</mat-icon>
-            </button>
-            <button id="button_format_bold">
-                <mat-icon>format_bold</mat-icon>
-            </button>
-            <button id="button_format_italic">
-                <mat-icon> format_italic</mat-icon>
-            </button>
-        </div>
-        <div id="title_post">
+        <div class="d-flex justify-content-between flex-wrap-reverse">
+            <div id="icones">
+                <button id="button_attach_file" (click)="buttonattach()">
+                    <mat-icon>attach_file</mat-icon>
+                </button>
+    
+                <button id="button_format_align_left" (click)="buttonaleft()">
+                    <mat-icon>format_align_left</mat-icon>
+                </button>
+    
+                <button id="button_format_align_center" (click)="buttonacenter()">
+                    <mat-icon>format_align_center</mat-icon>
+                </button>
+    
+                <button id="button_format_align_justify" (click)="buttonajustify()">
+                    <mat-icon>format_align_justify</mat-icon>
+                </button>
+    
+                <button id="button_format_align_right" (click)="buttonaright()">
+                    <mat-icon>format_align_right</mat-icon>
+                </button>
+    
+                <button id="button_format_bold" (click)="buttonbold()">
+                    <mat-icon>format_bold</mat-icon>
+                </button>
+    
+                <button id="button_format_italic" (click)="buttonitalic()">
+                    <mat-icon>format_italic</mat-icon>
+                </button>
+    
+            </div>
             <textarea id="title_p" name="title" placeholder="TÍTULO"></textarea>
         </div>
+    
         <div id="textarea_post">
             <textarea id="textarea_p" name="textarea" placeholder="Digite seu texto aqui..."></textarea>
         </div>
+        
         <div id="publicar-salvar">
             <button id="publish-button">PUBLICAR</button>
             <button id="save-button">SALVAR</button>
         </div>
     </div>
-</html>
+</div>

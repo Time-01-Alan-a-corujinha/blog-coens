@@ -1,29 +1,30 @@
-body{
-    background-color: #EBE6E6;
-    margin: 20px 80px 20px 80px;
-    //rgba(255, 255, 255, 0.5)
+.body{
+    background-color: #ebe6e6;
+    margin-top:80px;
+    margin-bottom:20px;
+    margin-left:20px;
+    margin-right:20px;
+    padding-bottom: 200px;
 }
-.icones {
-    display: flex;
-    justify-content: space-between;
-    border-width: 0px;
-}
+
 #title_p{
+    font-family: kreon;
     float: right;
     border-radius: 25px;
     padding: 6px;
-    width: 40%;
     height: 9%;
     max-width: 80%;
     resize: none;
     border: none;
     size: auto;
+    color: #841A1E;
+    font-size: 18px;
 
     &::placeholder {
         font-family: kreon;
         color: #841A1E;
         font-weight: 900;
-        font-size: 16px;
+        font-size: 20px;
         text-align: center;
         padding-top: 3px;
     }
@@ -33,7 +34,7 @@ body{
     resize: none;
     margin-top: 5px;
     width: 100%;
-    height: 78%;
+    min-height: 250px;
     max-width: 100%;
     border-radius: 10px;
     border-color: rgb(174, 174, 174);
@@ -46,27 +47,14 @@ body{
     }
 }
 
-#button_attach_file {
+#icones {
+    display: flex;
     float: left;
-    width: 5%;
-}#button_format_align_left {
-    float: left;
-    width: 5%;
-}#button_format_align_center {
-    float: left;
-    width: 5%
-}#button_format_align_justify {
-    float: left;
-    width: 5%;
-}#button_format_align_right {
-    float: left;
-    width: 5%;
-}#button_format_bold {
-    float: left;
-    width: 5%;
-}#button_format_italic {
-    float: left;
-    width: 5%;
+}
+
+#icones button {
+    border-width: 0px;
+    background-color: #ebe6e600;
 }
 
 #publish-button{
