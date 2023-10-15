@@ -13,6 +13,7 @@ import { InputCustomComponent } from './components/input-custom/input-custom.com
 import { BoxtextComponent } from './components/boxtext/boxtext.component';
 import { MeusPostsComponent } from './pages/noticias/meus-posts/meus-posts.component';
 import { RecentesComponent } from './pages/noticias/recentes/recentes.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { RecentesComponent } from './pages/noticias/recentes/recentes.component'
     InputCustomComponent,
     BoxtextComponent,
     MeusPostsComponent,
-    RecentesComponent
+    RecentesComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
