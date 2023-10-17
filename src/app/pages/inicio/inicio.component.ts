@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { InicioService } from './inicio.service';
 
 @Component({
   selector: 'app-inicio',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./inicio.component.scss']
 })
 export class InicioComponent implements OnInit {
+  public dados: any
 
-  constructor() { }
+  constructor(private inicioService: InicioService) { }
 
-  ngOnInit(): void {
+  async ngOnInit() {
+    await this.buscarDados()
+  }
+  
+  async buscarDados() {
+    this.dados = await this.inicioService.getInicio();
   }
 
 }
