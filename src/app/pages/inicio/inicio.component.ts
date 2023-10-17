@@ -13,7 +13,6 @@ export class InicioComponent implements OnInit {
 
   async ngOnInit() {
     await this.buscarDados()
-    console.log(this.dados);
   }
   
   async buscarDados() {
