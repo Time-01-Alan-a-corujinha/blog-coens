@@ -11,12 +11,19 @@ export class InicioComponent implements OnInit {
 
   constructor(private inicioService: InicioService) { }
 
-  async ngOnInit() {
-    await this.buscarDados()
+  ngOnInit() {
+    this.buscarDados()
   }
-  
-  async buscarDados() {
-    this.dados = await this.inicioService.getInicio();
+
+  buscarDados() {
+    this.inicioService.getInicio().subscribe({
+      next: (dados: any) => {
+        this.dados = dados.data.attributes
+        console.log(this.dados);
+      }, error: (err) => {
+        console.log(err)
+      }
+    });
   }
 
 }

@@ -9,11 +9,10 @@ export class HttpConfigService {
   private configUrl: string = "http://localhost:1337/api/"
   private populate: string = "?populate=*" // Trazer informações e mídias
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  async get(endereco: string): Promise<any> {
-    let retorno = await fetch(this.configUrl + endereco + this.populate)
-    return (await retorno.json()).data.attributes
+  get(endereco: string) {
+    return this.http.get(this.configUrl+endereco+this.populate)
   }
   
 }

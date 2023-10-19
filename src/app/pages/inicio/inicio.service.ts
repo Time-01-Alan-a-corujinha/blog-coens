@@ -8,7 +8,7 @@ export class InicioService {
 
   constructor(private httpConfig: HttpConfigService) { }
 
-  async getInicio() {    
-    return await this.httpConfig.get("inicio")
+  getInicio() {    
+    return this.httpConfig.get("inicio")
   }
 }
