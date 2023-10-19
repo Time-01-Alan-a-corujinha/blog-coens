@@ -14,6 +14,7 @@ import { BoxtextComponent } from './components/boxtext/boxtext.component';
 import { MeusPostsComponent } from './pages/noticias/meus-posts/meus-posts.component';
 import { RecentesComponent } from './pages/noticias/recentes/recentes.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { FooterComponent } from './components/footer/footer.component';
     NoopAnimationsModule,
     MatIconModule,
     MatMenuModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
