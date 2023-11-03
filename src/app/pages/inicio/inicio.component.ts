@@ -23,7 +23,6 @@ export class InicioComponent implements OnInit {
     this.inicioService.getInicio().subscribe({
       next: (dados: any) => {
         const infos = dados.data.attributes
-        console.log(infos);
 
         this.dados.descricao = infos.descricao
         this.dados.videoInstitucionalLink = infos.videoInstitucional.data.attributes.url
@@ -34,8 +33,6 @@ export class InicioComponent implements OnInit {
         this.dados.barraLateral.push({titulo: "Turno", descricao: infos.Turno})
         this.dados.barraLateral.push({titulo: "Número de Vagas", descricao: infos.numeroDeVagas})
         this.dados.barraLateral.push({titulo: "Forma de Ingresso", descricao: infos.formaDeIngresso})
-        
-        console.log(this.dados);
       }, error: (err) => {
         console.log(err)
       }
