@@ -1,3 +1,25 @@
-<p>inicio works!</p>
+<div class="body">
+    <div class="conteudo-principal">
+        <div class="texto">{{dados.descricao ? dados.descricao : ""}}</div>
+        <div class="video">
+            <iframe [src]="dados.videoInstitucionalLink | safeUrl"></iframe>
+        </div>
+    </div>
+    <hr>
+    <div class="conteudo-secundario">
+        <div class="posts-recentes">
 
+        </div>
+        <div class="infos">
+            <div *ngFor="let item of dados.barraLateral; last as last">
+                <h4 class="titulo">{{item.titulo}}</h4>
+                <p class="descricao">{{item.descricao}}</p>
+                <hr *ngIf="!last">
+            </div>
+                        
+        </div>
+    </div>
+</div>
+
+<div class="spacer"></div>
 <app-footer></app-footer>
