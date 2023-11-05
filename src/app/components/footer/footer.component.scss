@@ -3,7 +3,7 @@
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  max-height: 150px;
+  max-height: 100px;
   background-color: #D9D9D9;
   position: fixed;
   bottom: 0;
@@ -13,28 +13,27 @@
     margin: 0 20px;
 
     #logo-curso {
-      width: 10vw;
-      max-width: 120px;
-      max-height: 130px;
+      max-width: 10vw;
+      max-height: 100px;
     }
     #fale-conosco-img {
       width: 21vw; 
-      max-width: 260px;
+      max-width: 200px;
     }
     #endereco-img {
       width: 25vw;
-      max-width: 300px;
+      max-width: 230px;
     }
     #logo-utfpr {
-      width: 10vw;
-      max-height: 120px;
+      max-width: 10vw;
+      max-height: 70px;
     }
   }
 }
 
 @media (max-width: 600px) {
   .footer {
-    height: 120px;
+    height: 100px;
   }
 
   .texto-footer {
@@ -42,6 +41,6 @@
   }
 
   img {
-    width: 20vw !important;
+    max-width: 20vw !important;
   }
 }

@@ -15,6 +15,7 @@ import { MeusPostsComponent } from './pages/noticias/meus-posts/meus-posts.compo
 import { RecentesComponent } from './pages/noticias/recentes/recentes.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SafePipePipe } from './components/safe-pipe/safe-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
     MeusPostsComponent,
     RecentesComponent,
     FooterComponent,
+    SafePipePipe,
   ],
   imports: [
     BrowserModule,
