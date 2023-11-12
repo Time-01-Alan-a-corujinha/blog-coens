@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { InicioService } from './inicio.service';
 const showdown = require('showdown');
-// import {showdown} from 'showdown';
 
 @Component({
   selector: 'app-inicio',
@@ -29,14 +28,13 @@ export class InicioComponent implements OnInit {
         this.preencheDescricao(infos.descricao);
         
         this.dados.videoInstitucionalLink = infos.videoInstitucional.data.attributes.url
-        
+
         this.dados.barraLateral.push({titulo: "Tipo de Curso", descricao: infos.tipoCurso})
         this.dados.barraLateral.push({titulo: "Modalidade", descricao: infos.modalidade})
         this.dados.barraLateral.push({titulo: "Duração", descricao: infos.duracao})
         this.dados.barraLateral.push({titulo: "Turno", descricao: infos.Turno})
         this.dados.barraLateral.push({titulo: "Número de Vagas", descricao: infos.numeroDeVagas})
         this.dados.barraLateral.push({titulo: "Forma de Ingresso", descricao: infos.formaDeIngresso})
-        
       }, error: (err) => {
         console.log(err)
       }
@@ -52,5 +50,4 @@ export class InicioComponent implements OnInit {
       texto.innerHTML = descricaoConvertida
     } 
   }
-
 }
