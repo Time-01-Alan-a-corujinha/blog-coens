@@ -6,6 +6,8 @@ import { MenuComponent } from './components/menu/menu.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RecentesComponent } from './pages/noticias/recentes/recentes.component';
 import { MeusPostsComponent } from './pages/noticias/meus-posts/meus-posts.component';
+import { PosGraduacaoComponent } from './pages/pos-graduacao/pos-graduacao.component';
+import { ConhecaOAlanComponent } from './pages/conheca-o-alan/conheca-o-alan.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -15,7 +17,9 @@ const routes: Routes = [
     {path: 'noticias', children:[
       {path:'', component:RecentesComponent},
       {path:'meus-posts', component:MeusPostsComponent}
-    ]}
+    ]},
+    {path: 'pos-graduacao', component: PosGraduacaoComponent},
+    {path: 'conheca', component: ConhecaOAlanComponent}
   ]},
 ];
 

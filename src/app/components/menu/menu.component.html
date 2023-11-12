@@ -12,14 +12,14 @@
 
 <mat-menu #menu="matMenu" class="menu-box">
     <button mat-menu-item routerLink="">INÍCIO</button>
-    <button mat-menu-item>CURSOS</button>
+    <button mat-menu-item [matMenuTriggerFor]="curso">CURSO</button>
     <button mat-menu-item [matMenuTriggerFor]="noticias">NOTÍCIAS</button>
-    <button mat-menu-item>COENS</button>
-    <button mat-menu-item>PÓS-GRADUAÇÃO</button>
-    <button mat-menu-item>ATIVIDADES E PRODUÇÃO</button>
-    <button mat-menu-item>SISTEMAS</button>
-    <button mat-menu-item>OUTROS</button>
-    <button mat-menu-item>CONHEÇA O ALAN</button>
+    <button mat-menu-item [matMenuTriggerFor]="coens">COENS</button>
+    <button mat-menu-item routerLink="pos-graduacao">PÓS-GRADUAÇÃO</button>
+    <button mat-menu-item [matMenuTriggerFor]="atividades">ATIVIDADES E PRODUÇÃO</button>
+    <button mat-menu-item [matMenuTriggerFor]="sistemas">SISTEMAS</button>
+    <button mat-menu-item [matMenuTriggerFor]="outros">OUTROS</button>
+    <button mat-menu-item routerLink="conheca">CONHEÇA O ALAN</button>
 </mat-menu>
 
 <mat-menu #noticias="matMenu" class="menu-box">
@@ -31,4 +31,41 @@
 <mat-menu #perfil="matMenu" class="menu-box">
     <button mat-menu-item>MEU PERFIL</button>
     <button mat-menu-item routerLink="../login">SAIR</button>
+</mat-menu>
+
+<mat-menu #curso="matMenu" class="menu-box">
+    <button mat-menu-item>DESCRIÇÃO DO CURSO</button>
+    <button mat-menu-item>MATRIZ CURRICULAR</button>
+    <button mat-menu-item>ATIVIDADES</button>
+    <button mat-menu-item>COMPLEMENTARES</button>
+    <button mat-menu-item>ESTÁGIO CURRICULAR</button>
+    <button mat-menu-item>TRABALHO DE</button>
+    <button mat-menu-item>CONCLUSÃO DE CURSO</button>
+    <button mat-menu-item>CENTRO ACADÊMICO</button>
+    <button mat-menu-item>INTERCIONALIZAÇÃO</button>
+</mat-menu>
+
+<mat-menu #coens="matMenu" class="menu-box">
+    <button mat-menu-item>COORDENAÇÃO</button>
+    <button mat-menu-item>DOCENTES</button>
+    <button mat-menu-item>NÚCLEO DOCENTES</button>
+    <button mat-menu-item>ESTRUTURANTE</button>
+    <button mat-menu-item>COLEGIADO</button>
+</mat-menu>
+
+<mat-menu #atividades="matMenu" class="menu-box">
+    <button mat-menu-item>PRODUÇÃO ACADÊMICA</button>
+    <button mat-menu-item>GRUPOS DE PESQUISA</button>
+    <button mat-menu-item>PROJETOS DE EXTENSÃO</button>
+</mat-menu>
+
+<mat-menu #sistemas="matMenu" class="menu-box">
+    <button mat-menu-item>SIACOES</button>
+    <button mat-menu-item>SIEMCE</button>
+</mat-menu>
+
+<mat-menu #outros="matMenu" class="menu-box">
+    <button mat-menu-item>HORÁRIOS E CALENDÁRIOS</button>
+    <button mat-menu-item>LEGISLAÇÃO</button>
+    <button mat-menu-item>LOGOMARCAS</button>
 </mat-menu>
