@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpConfigService } from 'src/app/services/http-config.service';
+import { HttpConfigService } from 'src/app/services/http-config/http-config.service';
 
 @Injectable({
   providedIn: 'root'

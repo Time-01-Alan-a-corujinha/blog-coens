@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { InicioService } from './inicio.service';
-const showdown = require('showdown');
+import { TextoUtils } from 'src/app/services/texto-util/texto-util';
 
 @Component({
   selector: 'app-inicio',
@@ -25,7 +25,7 @@ export class InicioComponent implements OnInit {
       next: (dados: any) => {
         const infos = dados.data.attributes
         
-        this.preencheDescricao(infos.descricao);
+        TextoUtils.preencheElementoDOM("texto", TextoUtils.markDownParaHtml(infos.descricao));
         
         this.dados.videoInstitucionalLink = infos.videoInstitucional.data.attributes.url
 
@@ -41,13 +41,4 @@ export class InicioComponent implements OnInit {
     });
   }
 
-  preencheDescricao(desc: string) {
-    let texto = document.getElementById('texto');
-    if (texto) {
-      let converter = new showdown.Converter();
-      let descricaoConvertida = converter.makeHtml(desc);
-      
-      texto.innerHTML = descricaoConvertida
-    } 
-  }
 }
