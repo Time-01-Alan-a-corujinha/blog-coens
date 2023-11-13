@@ -18,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SafePipePipe } from './components/safe-pipe/safe-pipe.pipe';
 import { PosGraduacaoComponent } from './pages/pos-graduacao/pos-graduacao.component';
 import { ConhecaOAlanComponent } from './pages/conheca-o-alan/conheca-o-alan.component';
+import { DescricaoCursoComponent } from './pages/curso/descricao-curso/descricao-curso.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { ConhecaOAlanComponent } from './pages/conheca-o-alan/conheca-o-alan.com
     SafePipePipe,
     PosGraduacaoComponent,
     ConhecaOAlanComponent,
+    DescricaoCursoComponent,
   ],
   imports: [
     BrowserModule,

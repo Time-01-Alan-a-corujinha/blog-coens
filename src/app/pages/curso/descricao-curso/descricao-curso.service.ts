@@ -4,11 +4,11 @@ import { HttpConfigService } from 'src/app/services/http-config/http-config.serv
 @Injectable({
   providedIn: 'root'
 })
-export class InicioService {
+export class DescricaoCursoService {
 
   constructor(private httpConfig: HttpConfigService) { }
 
-  getInicio() {    
-    return this.httpConfig.get("inicio")
+  getDescricaoCurso() {
+    return this.httpConfig.get("curso-descricao-do-curso", "?populate=projetoPedagogico.media")
   }
 }
