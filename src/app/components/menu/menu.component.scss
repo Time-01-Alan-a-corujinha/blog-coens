@@ -24,3 +24,12 @@
     font-size: 18px;
     font-family: 'Kreon', sans-serif;
 }
+
+::ng-deep .mat-menu-panel {
+    max-width: 265px !important;
+}
+
+button {
+    text-wrap: wrap;
+    line-height: normal;
+}
