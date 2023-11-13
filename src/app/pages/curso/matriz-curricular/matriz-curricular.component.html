@@ -1,0 +1,14 @@
+<div class="px-4 spacer">
+    <h2 class="titulo pb-2">{{dados.titulo}}</h2>
+    
+    <div class="mb-5 matriz" *ngFor="let matriz of dados.matrizesCurriculares">
+        <h3><a href="{{matriz.linkTitulo}}" target="_blank">{{matriz.titulo}}</a></h3>
+        <h4>{{matriz.subtitulo}}</h4><br>
+        
+        <div class="row justify-content-center">
+            <img src="{{matriz.linkImagem}}" alt="logo" style="width: 80vw; max-width: 900px;">
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

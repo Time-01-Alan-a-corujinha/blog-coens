@@ -19,6 +19,7 @@ import { SafePipePipe } from './components/safe-pipe/safe-pipe.pipe';
 import { PosGraduacaoComponent } from './pages/pos-graduacao/pos-graduacao.component';
 import { ConhecaOAlanComponent } from './pages/conheca-o-alan/conheca-o-alan.component';
 import { DescricaoCursoComponent } from './pages/curso/descricao-curso/descricao-curso.component';
+import { MatrizCurricularComponent } from './pages/curso/matriz-curricular/matriz-curricular.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { DescricaoCursoComponent } from './pages/curso/descricao-curso/descricao
     PosGraduacaoComponent,
     ConhecaOAlanComponent,
     DescricaoCursoComponent,
+    MatrizCurricularComponent,
   ],
   imports: [
     BrowserModule,

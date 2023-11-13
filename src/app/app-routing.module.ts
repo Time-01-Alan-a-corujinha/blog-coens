@@ -9,6 +9,7 @@ import { MeusPostsComponent } from './pages/noticias/meus-posts/meus-posts.compo
 import { PosGraduacaoComponent } from './pages/pos-graduacao/pos-graduacao.component';
 import { ConhecaOAlanComponent } from './pages/conheca-o-alan/conheca-o-alan.component';
 import { DescricaoCursoComponent } from './pages/curso/descricao-curso/descricao-curso.component';
+import { MatrizCurricularComponent } from './pages/curso/matriz-curricular/matriz-curricular.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path: 'menu', component: MenuComponent, children: [
     {path: '', component: InicioComponent},
     {path: 'curso', children: [
-      {path:'', component: DescricaoCursoComponent}
+      {path:'', component: DescricaoCursoComponent},
+      {path:'matriz-curricular', component: MatrizCurricularComponent}
     ]},
     {path: 'noticias', children:[
       {path:'', component:RecentesComponent},
