@@ -59,8 +59,12 @@
 </mat-menu>
 
 <mat-menu #sistemas="matMenu" class="menu-box">
-    <button mat-menu-item>SIACOES</button>
-    <button mat-menu-item>SIEMCE</button>
+    <a *ngFor="let sistema of listaSistemas" 
+        href="{{sistema.link}}" target="_blank">
+        <button mat-menu-item>
+            {{sistema.titulo}}
+        </button>
+    </a>
 </mat-menu>
 
 <mat-menu #outros="matMenu" class="menu-box">
