@@ -20,6 +20,7 @@ import { PosGraduacaoComponent } from './pages/pos-graduacao/pos-graduacao.compo
 import { ConhecaOAlanComponent } from './pages/conheca-o-alan/conheca-o-alan.component';
 import { DescricaoCursoComponent } from './pages/curso/descricao-curso/descricao-curso.component';
 import { MatrizCurricularComponent } from './pages/curso/matriz-curricular/matriz-curricular.component';
+import { DocentesComponent } from './pages/coens/docentes/docentes.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { MatrizCurricularComponent } from './pages/curso/matriz-curricular/matri
     ConhecaOAlanComponent,
     DescricaoCursoComponent,
     MatrizCurricularComponent,
+    DocentesComponent,
   ],
   imports: [
     BrowserModule,
