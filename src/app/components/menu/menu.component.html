@@ -55,15 +55,13 @@
 <mat-menu #atividades="matMenu" class="menu-box">
     <button mat-menu-item>PRODUÇÃO ACADÊMICA</button>
     <button mat-menu-item>GRUPOS DE PESQUISA</button>
-    <button mat-menu-item>PROJETOS DE EXTENSÃO</button>
+    <button mat-menu-item routerLink="atividades-producao/projetos-extensao">PROJETOS DE EXTENSÃO</button>
 </mat-menu>
 
 <mat-menu #sistemas="matMenu" class="menu-box">
     <a *ngFor="let sistema of listaSistemas" 
         href="{{sistema.link}}" target="_blank">
-        <button mat-menu-item>
-            {{sistema.titulo}}
-        </button>
+        <button mat-menu-item>{{sistema.titulo}}</button>
     </a>
 </mat-menu>
 

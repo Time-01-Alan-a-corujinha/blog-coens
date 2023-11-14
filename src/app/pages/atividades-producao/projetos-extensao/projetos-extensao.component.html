@@ -1,0 +1,11 @@
+<div class="px-5 spacer">
+    <h2 class="titulo pb-2">{{dados.titulo}}</h2>
+    
+    <div *ngFor="let projeto of dados.listaProjetos">
+        <a href="{{projeto.link}}" target="_blank"><h4>{{projeto.nome}}</h4></a>
+        <p>{{projeto.descricao}}</p>
+        
+    </div>
+</div>
+
+<app-footer></app-footer>
