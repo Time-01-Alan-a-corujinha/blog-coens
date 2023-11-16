@@ -25,6 +25,7 @@ import { EstagioCurricularComponent } from './pages/curso/estagio-curricular/est
 import { InternacionalizacaoComponent } from './pages/curso/internacionalizacao/internacionalizacao.component';
 import { LogomarcasComponent } from './pages/outros/logomarcas/logomarcas.component';
 import { LegislacaoComponent } from './pages/outros/legislacao/legislacao.component';
+import { HorarioCalendarioComponent } from './pages/outros/horario-calendario/horario-calendario.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { LegislacaoComponent } from './pages/outros/legislacao/legislacao.compon
     InternacionalizacaoComponent,
     LogomarcasComponent,
     LegislacaoComponent,
+    HorarioCalendarioComponent,
   ],
   imports: [
     BrowserModule,
