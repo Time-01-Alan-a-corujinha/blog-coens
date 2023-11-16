@@ -1,0 +1,9 @@
+<div class="px-5 spacer">
+    <h2 class="titulo pb-2">Logomarcas</h2>
+
+    <div *ngFor="let imagem of listaImagens; index as i" class="row justify-content-center mb-5">
+        <img id="imagem{{i}}" src="{{imagem.url}}" alt="logo" style="width: 80vw; max-width: 350px;">
+    </div>
+</div>
+
+<app-footer></app-footer>
