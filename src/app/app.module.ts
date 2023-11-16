@@ -23,6 +23,7 @@ import { MatrizCurricularComponent } from './pages/curso/matriz-curricular/matri
 import { ProjetosExtensaoComponent } from './pages/atividades-producao/projetos-extensao/projetos-extensao.component';
 import { EstagioCurricularComponent } from './pages/curso/estagio-curricular/estagio-curricular.component';
 import { InternacionalizacaoComponent } from './pages/curso/internacionalizacao/internacionalizacao.component';
+import { LogomarcasComponent } from './pages/outros/logomarcas/logomarcas.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { InternacionalizacaoComponent } from './pages/curso/internacionalizacao/
     ProjetosExtensaoComponent,
     EstagioCurricularComponent,
     InternacionalizacaoComponent,
+    LogomarcasComponent,
   ],
   imports: [
     BrowserModule,
