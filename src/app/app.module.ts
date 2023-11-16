@@ -22,6 +22,7 @@ import { DescricaoCursoComponent } from './pages/curso/descricao-curso/descricao
 import { MatrizCurricularComponent } from './pages/curso/matriz-curricular/matriz-curricular.component';
 import { ProjetosExtensaoComponent } from './pages/atividades-producao/projetos-extensao/projetos-extensao.component';
 import { EstagioCurricularComponent } from './pages/curso/estagio-curricular/estagio-curricular.component';
+import { InternacionalizacaoComponent } from './pages/curso/internacionalizacao/internacionalizacao.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { EstagioCurricularComponent } from './pages/curso/estagio-curricular/est
     MatrizCurricularComponent,
     ProjetosExtensaoComponent,
     EstagioCurricularComponent,
+    InternacionalizacaoComponent,
   ],
   imports: [
     BrowserModule,

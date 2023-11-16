@@ -21,7 +21,6 @@ export class EstagioCurricularComponent implements OnInit {
     this.estagioCurricularService.getEstagioCurricular().subscribe({
       next: (dados: any) => {
         const infos = dados.data.attributes
-        console.log(infos);
         
         this.dados.titulo = infos.titulo
         TextoUtils.preencheElementoDOM("descricao-inicial", TextoUtils.markDownParaHtml(infos.descricao));
@@ -52,11 +51,7 @@ export class EstagioCurricularComponent implements OnInit {
           emailProf: infos.ProfessorResponsavelEstagio.emailProf,
           emailUniversidade: infos.ProfessorResponsavelEstagio.emailUniversidade,
           linkDeAjuda: infos.ProfessorResponsavelEstagio.linkDeAjuda,
-          
         }
-
-
-        console.log(this.dados);
       }
     })
   }
