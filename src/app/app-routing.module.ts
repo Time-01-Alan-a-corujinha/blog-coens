@@ -14,6 +14,7 @@ import { ProjetosExtensaoComponent } from './pages/atividades-producao/projetos-
 import { EstagioCurricularComponent } from './pages/curso/estagio-curricular/estagio-curricular.component';
 import { InternacionalizacaoComponent } from './pages/curso/internacionalizacao/internacionalizacao.component';
 import { LogomarcasComponent } from './pages/outros/logomarcas/logomarcas.component';
+import { LegislacaoComponent } from './pages/outros/legislacao/legislacao.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -34,6 +35,7 @@ const routes: Routes = [
       {path: 'projetos-extensao', component: ProjetosExtensaoComponent}
     ]},
     {path: 'outros', children: [
+      {path: 'legislacao', component: LegislacaoComponent},
       {path: 'logomarcas', component: LogomarcasComponent}
     ]},
     {path: 'pos-graduacao', component: PosGraduacaoComponent},
