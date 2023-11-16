@@ -21,6 +21,7 @@ import { ConhecaOAlanComponent } from './pages/conheca-o-alan/conheca-o-alan.com
 import { DescricaoCursoComponent } from './pages/curso/descricao-curso/descricao-curso.component';
 import { MatrizCurricularComponent } from './pages/curso/matriz-curricular/matriz-curricular.component';
 import { ProjetosExtensaoComponent } from './pages/atividades-producao/projetos-extensao/projetos-extensao.component';
+import { EstagioCurricularComponent } from './pages/curso/estagio-curricular/estagio-curricular.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { ProjetosExtensaoComponent } from './pages/atividades-producao/projetos-
     DescricaoCursoComponent,
     MatrizCurricularComponent,
     ProjetosExtensaoComponent,
+    EstagioCurricularComponent,
   ],
   imports: [
     BrowserModule,

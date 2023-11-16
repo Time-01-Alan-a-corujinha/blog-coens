@@ -1,0 +1,68 @@
+<div class="px-5 spacer">
+    <h2 class="titulo pb-2">{{dados.titulo}}</h2>
+    <div id="descricao-inicial"></div>
+    <br>
+
+    <a *ngIf="dados.edital" href="{{dados.edital.linkTitulo}}" target="_blank">
+        <h4>{{dados.edital.titulo}}</h4>
+    </a>
+    <div id="descricao-edital"></div>
+    <br>
+
+    <div *ngIf="dados.normas">
+        <h4 class="subtitulo">{{dados.normas.titulo}}</h4>
+        <ul>
+            <a *ngFor="let norma of dados.normas.lista" 
+                href="{{norma.link}}" target="_blank">
+                <li>{{norma.texto}}</li>
+            </a>
+        </ul>
+    </div>
+    <br>
+
+    <div *ngIf="dados.sistemas">
+        <h4 class="subtitulo">{{dados.sistemas.titulo}}</h4>
+        <ul>
+            <a *ngFor="let sistema of dados.sistemas.lista" 
+                href="{{sistema.link}}" target="_blank">
+                <li>{{sistema.texto}}</li>
+            </a>
+        </ul>
+    </div>
+    <br>
+
+    <div *ngIf="dados.professor">
+        <h4 class="subtitulo">{{dados.professor.titulo}}</h4>
+        <ul>
+            <li *ngIf="dados.professor.nomeProf">
+                <p class="m-0">
+                    <b>Professor: </b>{{dados.professor.nomeProf}}
+                </p>
+            </li>
+            <li *ngIf="dados.professor.telefoneProf">
+                <p class="m-0">
+                    <b>Telefone: </b>{{dados.professor.telefoneProf}}
+                </p>
+            </li>
+            <li *ngIf="dados.professor.emailProf">
+                <p class="m-0">
+                    <b>E-mail: </b><a href="mailto:{{dados.professor.emailProf}}">{{dados.professor.emailProf}}</a>
+                </p>
+            </li>
+            <li *ngIf="dados.professor.emailUniversidade">
+                <p class="m-0">
+                    <b>E-mail universidade: </b><a href="mailto:{{dados.professor.emailUniversidade}}">{{dados.professor.emailUniversidade}}</a>
+                </p>
+            </li>
+            <li *ngIf="dados.professor.linkDeAjuda">
+                <p class="m-0">
+                    <b>Link de ajuda: </b>{{dados.professor.linkDeAjuda}}
+                </p>
+            </li>
+        </ul>
+    </div>
+    <br>
+
+</div>
+
+<app-footer></app-footer>

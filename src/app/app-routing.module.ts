@@ -11,6 +11,7 @@ import { ConhecaOAlanComponent } from './pages/conheca-o-alan/conheca-o-alan.com
 import { DescricaoCursoComponent } from './pages/curso/descricao-curso/descricao-curso.component';
 import { MatrizCurricularComponent } from './pages/curso/matriz-curricular/matriz-curricular.component';
 import { ProjetosExtensaoComponent } from './pages/atividades-producao/projetos-extensao/projetos-extensao.component';
+import { EstagioCurricularComponent } from './pages/curso/estagio-curricular/estagio-curricular.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -19,7 +20,8 @@ const routes: Routes = [
     {path: '', component: InicioComponent},
     {path: 'curso', children: [
       {path:'', component: DescricaoCursoComponent},
-      {path:'matriz-curricular', component: MatrizCurricularComponent}
+      {path:'matriz-curricular', component: MatrizCurricularComponent},
+      {path:'estagio-curricular', component: EstagioCurricularComponent},
     ]},
     {path: 'noticias', children:[
       {path:'', component:RecentesComponent},
