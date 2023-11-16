@@ -12,6 +12,7 @@ import { DescricaoCursoComponent } from './pages/curso/descricao-curso/descricao
 import { MatrizCurricularComponent } from './pages/curso/matriz-curricular/matriz-curricular.component';
 import { ProjetosExtensaoComponent } from './pages/atividades-producao/projetos-extensao/projetos-extensao.component';
 import { EstagioCurricularComponent } from './pages/curso/estagio-curricular/estagio-curricular.component';
+import { InternacionalizacaoComponent } from './pages/curso/internacionalizacao/internacionalizacao.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -22,6 +23,7 @@ const routes: Routes = [
       {path:'', component: DescricaoCursoComponent},
       {path:'matriz-curricular', component: MatrizCurricularComponent},
       {path:'estagio-curricular', component: EstagioCurricularComponent},
+      {path:'internacionalizacao', component: InternacionalizacaoComponent},
     ]},
     {path: 'noticias', children:[
       {path:'', component:RecentesComponent},
