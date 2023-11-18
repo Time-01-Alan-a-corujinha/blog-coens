@@ -1,0 +1,64 @@
+<div class="px-5 spacer">
+    <h2 class="titulo pb-2">{{dados.titulo}}</h2>
+    <div id="descricao"></div>
+    <a href="{{dados.link}}" target="_blank">
+        <p>{{dados.link}}</p>
+    </a>
+    <br>
+    <div align="center">
+        <div *ngFor="let ano of dados.listaProducoes" class="producao-ano">
+            <mat-accordion>
+                <mat-expansion-panel (opened)="true" hideToggle>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            <h4 class="subtitulo m-0">{{ano.ano}}</h4>
+                        </mat-panel-title>
+                        
+                        <mat-panel-description class="justify-content-end">
+                            <mat-icon class="dropdown-icon">school</mat-icon>
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+
+                    <table mat-table [dataSource]="ano.academicosTCC" class="mat-elevation-z8">
+                        <ng-container matColumnDef="academico">
+                            <th mat-header-cell *matHeaderCellDef>
+                                <h6 class="text-dark">Acadêmico(a)</h6>    
+                            </th>
+                            <td mat-cell *matCellDef="let element"> {{element.academico}} </td>
+                        </ng-container>
+                    
+                        <ng-container matColumnDef="orientadores">
+                            <th mat-header-cell *matHeaderCellDef>
+                                <h6 class="text-dark">Orientador(es)</h6>    
+                            </th>
+                            <td mat-cell *matCellDef="let element"> {{element.orientadores}} </td>
+                        </ng-container>
+                    
+                        <ng-container matColumnDef="anoESemestre">
+                            <th mat-header-cell *matHeaderCellDef>
+                                <h6 class="text-dark">Ano/Semestre</h6>    
+                            </th>
+                            <td mat-cell *matCellDef="let element"> {{element.anoESemestre}} </td>
+                        </ng-container>
+                    
+                        <ng-container matColumnDef="tituloDoTrabalho">
+                            <th mat-header-cell *matHeaderCellDef>
+                                <h6 class="text-dark">Título do Trabalho</h6>    
+                            </th>
+                            <td mat-cell *matCellDef="let element"> 
+                                <a href="{{element.linkDoTrabalho}}" target="_blank">
+                                    {{element.tituloDoTrabalho}} 
+                                </a>
+                            </td>
+                        </ng-container>
+                    
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    </table>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

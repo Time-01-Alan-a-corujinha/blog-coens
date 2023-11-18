@@ -16,6 +16,7 @@ import { InternacionalizacaoComponent } from './pages/curso/internacionalizacao/
 import { LogomarcasComponent } from './pages/outros/logomarcas/logomarcas.component';
 import { LegislacaoComponent } from './pages/outros/legislacao/legislacao.component';
 import { HorarioCalendarioComponent } from './pages/outros/horario-calendario/horario-calendario.component';
+import { ProducaoAcademicaComponent } from './pages/atividades-producao/producao-academica/producao-academica.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -33,6 +34,7 @@ const routes: Routes = [
       {path:'meus-posts', component:MeusPostsComponent}
     ]},
     {path: 'atividades-producao', children: [
+      {path: 'producao-academica', component: ProducaoAcademicaComponent},
       {path: 'projetos-extensao', component: ProjetosExtensaoComponent}
     ]},
     {path: 'outros', children: [
