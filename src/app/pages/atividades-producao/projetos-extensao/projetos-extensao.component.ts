@@ -26,7 +26,6 @@ export class ProjetosExtensaoComponent implements OnInit {
         this.dados.listaProjetos = this.dados.ProjetoDeExtensao
         this.dados.listaProjetos.map((proj: any) => delete proj.id)
         delete this.dados.ProjetoDeExtensao
-        console.log(this.dados);
       },
     })
   }

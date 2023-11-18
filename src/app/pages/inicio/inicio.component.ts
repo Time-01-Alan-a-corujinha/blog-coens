@@ -35,9 +35,7 @@ export class InicioComponent implements OnInit {
         this.dados.barraLateral.push({titulo: "Turno", descricao: infos.Turno})
         this.dados.barraLateral.push({titulo: "Número de Vagas", descricao: infos.numeroDeVagas})
         this.dados.barraLateral.push({titulo: "Forma de Ingresso", descricao: infos.formaDeIngresso})
-      }, error: (err) => {
-        console.log(err)
-      }
+      },
     });
   }
 
