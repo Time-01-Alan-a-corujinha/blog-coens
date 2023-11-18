@@ -15,6 +15,7 @@ import { EstagioCurricularComponent } from './pages/curso/estagio-curricular/est
 import { InternacionalizacaoComponent } from './pages/curso/internacionalizacao/internacionalizacao.component';
 import { LogomarcasComponent } from './pages/outros/logomarcas/logomarcas.component';
 import { LegislacaoComponent } from './pages/outros/legislacao/legislacao.component';
+import { HorarioCalendarioComponent } from './pages/outros/horario-calendario/horario-calendario.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -35,6 +36,7 @@ const routes: Routes = [
       {path: 'projetos-extensao', component: ProjetosExtensaoComponent}
     ]},
     {path: 'outros', children: [
+      {path: 'horario-calendario', component: HorarioCalendarioComponent},
       {path: 'legislacao', component: LegislacaoComponent},
       {path: 'logomarcas', component: LogomarcasComponent}
     ]},

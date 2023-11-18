@@ -1,0 +1,35 @@
+<div class="px-5 spacer">
+    <h2 class="titulo pb-2">{{dados.titulo}}</h2>
+    <div align="center">
+        <div *ngFor="let ano of dados.listaHorarios" class="horario-ano">
+            <mat-accordion>
+                <mat-expansion-panel (opened)="true" hideToggle>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            <h4 class="subtitulo m-0">{{ano.ano}}</h4>
+                        </mat-panel-title>
+                        
+                        <mat-panel-description class="justify-content-end">
+                            <mat-icon class="dropdown-icon">date_range</mat-icon>
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+    
+                    <a *ngIf="ano.calendarioResumido" href="{{ano.calendarioResumido}}" target="_blank">
+                        <h6>Calendário Resumido</h6>
+                    </a>
+                    <a *ngIf="ano.calendarioCompleto" href="{{ano.calendarioCompleto}}" target="_blank">
+                        <h6>Calendário Completo</h6>
+                    </a>
+                    <a *ngIf="ano.horario1Semestre" href="{{ano.horario1Semestre}}" target="_blank">
+                        <h6>Horários 1º Semestre</h6>
+                    </a>
+                    <a *ngIf="ano.horario2Semestre" href="{{ano.horario2Semestre}}" target="_blank">
+                        <h6>Horários 2º Semestre</h6>
+                    </a>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>
