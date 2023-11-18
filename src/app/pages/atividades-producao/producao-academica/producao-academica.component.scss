@@ -1,0 +1,38 @@
+.titulo {
+    font-family: 'Kreon', sans-serif;
+    font-weight: 600;
+}
+
+.titulo, a, .subtitulo, .dropdown-icon {
+    color: #841A1E;
+}
+
+a {
+    text-decoration: none;
+    overflow-wrap: break-word;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.producao-ano {
+    max-width: 70vw;
+    width: 900px; 
+    margin-bottom: 10px;
+}
+
+th, td {
+    text-align: center !important;
+    min-width: 150px;
+}
+
+::ng-deep .mat-expansion-panel-header {
+    background-color: #e7e7e7 !important;
+}
+
+::ng-deep .mat-expansion-panel-body {
+    padding: 0 !important;
+    overflow-x: visible;
+    overflow-y: hidden;
+}

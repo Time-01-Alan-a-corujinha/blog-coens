@@ -27,6 +27,8 @@ import { LogomarcasComponent } from './pages/outros/logomarcas/logomarcas.compon
 import { LegislacaoComponent } from './pages/outros/legislacao/legislacao.component';
 import { HorarioCalendarioComponent } from './pages/outros/horario-calendario/horario-calendario.component';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { ProducaoAcademicaComponent } from './pages/atividades-producao/producao-academica/producao-academica.component';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -50,6 +52,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
     LogomarcasComponent,
     LegislacaoComponent,
     HorarioCalendarioComponent,
+    ProducaoAcademicaComponent,
   ],
   imports: [
     BrowserModule,
@@ -59,6 +62,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatMenuModule,
     HttpClientModule,
     MatExpansionModule,
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
