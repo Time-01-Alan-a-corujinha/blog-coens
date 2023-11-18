@@ -20,18 +20,18 @@ export class HorarioCalendarioComponent implements OnInit {
     this.horarioCalendarioService.getHorarioCalendario().subscribe({
       next: (dados: any) => {
         const infos = dados.data.attributes
-        console.log(infos);
-        
+
         let listaHorarios: Array<any> = infos.horarioECalendario
-        listaHorarios.forEach(listaAno => {
-          console.log(listaAno);
+        listaHorarios.map(listaAno => {
+          listaAno.open = false
+          listaAno.horario1Semestre = listaAno.horario1Semestre.data.attributes.url
+          listaAno.horario2Semestre = listaAno.horario2Semestre.data.attributes.url
         });
 
         this.dados = {
           titulo: infos.titulo,
           listaHorarios: listaHorarios
-        }        
-        console.log(this.dados);
+        }
       }
     })
   }

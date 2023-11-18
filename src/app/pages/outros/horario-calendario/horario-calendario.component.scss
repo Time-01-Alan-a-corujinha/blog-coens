@@ -1,0 +1,30 @@
+.titulo {
+    font-family: 'Kreon', sans-serif;
+    font-weight: 600;
+}
+
+.titulo, a, .subtitulo, .dropdown-icon {
+    color: #841A1E;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.horario-ano {
+    max-width: 70vw; 
+    width: 600px; 
+    margin-bottom: 10px;
+}
+
+::ng-deep .mat-expansion-panel-header {
+    background-color: #e7e7e7 !important;
+}
+
+::ng-deep .mat-expansion-panel-body {
+    padding: 24px 16px !important;
+}

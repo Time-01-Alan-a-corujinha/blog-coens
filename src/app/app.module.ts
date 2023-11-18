@@ -26,6 +26,7 @@ import { InternacionalizacaoComponent } from './pages/curso/internacionalizacao/
 import { LogomarcasComponent } from './pages/outros/logomarcas/logomarcas.component';
 import { LegislacaoComponent } from './pages/outros/legislacao/legislacao.component';
 import { HorarioCalendarioComponent } from './pages/outros/horario-calendario/horario-calendario.component';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { HorarioCalendarioComponent } from './pages/outros/horario-calendario/ho
     MatIconModule,
     MatMenuModule,
     HttpClientModule,
+    MatExpansionModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
