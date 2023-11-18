@@ -22,8 +22,6 @@ export class ProducaoAcademicaComponent implements OnInit {
     this.producaoAcademicaService.getProducaoAcademica().subscribe({
       next: (dados: any) => {
         const infos = dados.data.attributes
-        console.log(infos);
-        
         
         let listaProducoes: Array<any> = infos.producoesAcademicasPorAno
         listaProducoes.map(listaProducao => {
