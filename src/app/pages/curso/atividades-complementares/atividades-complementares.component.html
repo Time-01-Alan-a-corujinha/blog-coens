@@ -1,46 +1,22 @@
 <div class="px-5 spacer">
     <h2 class="titulo pb-2">{{dados.titulo}}</h2>
-    
-    <div *ngIf="dados.imagemPrincipal" class="row justify-content-center">
-        <img src="{{dados.imagemPrincipal}}" alt="logo" style="width: 80vw; max-width: 800px;">
-    </div>
-    <p align="center">{{dados.legendaImagemPrincipal}}</p>
-    <br>
-    
     <div id="descricao"></div>
     <br>
-    
-    <div *ngIf="dados.imagemSecundaria" class="row justify-content-center">
-        <img src="{{dados.imagemSecundaria}}" alt="logo" style="width: 80vw; max-width: 300px;">
-    </div>
-    <br>
-    <p align="center">{{dados.legendaImagemSecundaria}}</p>
-    <br>
-    
-    <div *ngFor="let editais of dados.editaisDuplaDiplomacao">
-        <h4 class="subtitulo">{{editais.titulo}}</h4>
-        <div *ngFor="let edital of editais.TextoELink">
-            <a href="{{edital.link}}" target="_blank">{{edital.texto}}</a>
-        </div>
-    </div>
-    <br>
-    
-    <div *ngFor="let editais of dados.editaisMobilidadeEstudantil">
-        <h4 class="subtitulo">{{editais.titulo}}</h4>
-        <div *ngFor="let edital of editais.TextoELink">
-            <a href="{{edital.link}}" target="_blank">{{edital.texto}}</a>
-        </div>
-    </div>
-    <br>
-    
-    <div *ngFor="let editais of dados.linksImportantes">
-        <h4 class="subtitulo">{{editais.titulo}}</h4>
-        <div *ngFor="let edital of editais.TextoELink">
-            <a href="{{edital.link}}" target="_blank">{{edital.texto}}</a>
+
+    <div *ngIf="dados.regulamentos">
+        <h4 class="subtitulo">{{dados.regulamentos.titulo}}</h4>
+        <div *ngFor="let regulamento of dados.regulamentos.linksRegulamentos">
+            <a href="{{regulamento.link}}" target="_blank">{{regulamento.titulo}}</a>
         </div>
     </div>
     <br>
 
+    <div *ngIf="dados.sistema">
+        <h4 class="subtitulo">{{dados.sistema.titulo}}</h4>
+        <a href="{{dados.sistema.link}}" target="_blank">{{dados.sistema.titulo}}</a>
+    </div>
+    <br>
+    
     <div *ngIf="dados.professor">
         <h4 class="subtitulo">{{dados.professor.titulo}}</h4>
         <ul>
@@ -72,6 +48,7 @@
         </ul>
     </div>
     <br>
+
 </div>
 
 <app-footer></app-footer>
