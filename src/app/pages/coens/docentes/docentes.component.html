@@ -1,1 +1,13 @@
-<p>docentes works!</p>
+<div>
+    <div class="infos">
+        <P>ta funcionando</P>
+        <div *ngFor="let item of dados.docentes; last as last">
+            <iframe [src]="item.docentes.profileImagem | safeUrl"></iframe>
+            <h4 class="Nome">{{item.nome}}</h4>
+            <p class="E-mail">{{item.email}}</p>
+            <p class="lattesLink">{{item.lattesLink}}</p>
+            <p class="Nivel Superior">{{item.nivel}}</p>
+            <hr *ngIf="!last">
+        </div>       
+    </div>
+</div>
