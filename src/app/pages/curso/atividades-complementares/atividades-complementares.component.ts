@@ -9,7 +9,7 @@ import { TextoUtils } from 'src/app/services/texto-util/texto-util';
 })
 export class AtividadesComplementaresComponent implements OnInit {
 
-  public dados: any = []
+  public dados: any = {}
 
   constructor(private atividadesComplementaresService: AtividadesComplementaresService) { }
 
@@ -26,7 +26,11 @@ export class AtividadesComplementaresComponent implements OnInit {
         this.dados = {
           titulo: infos.titulo,
           regulamentos: infos.RegulamentosAtividadesComplementares[0],
-          sistema: infos.SistemasAtividadesComplementares[0],
+          sistema: {
+            titulo: infos.SistemasAtividadesComplementares[0].titulo,
+            texto: infos.SistemasAtividadesComplementares[0].linksSistemas[0].titulo,
+            link: infos.SistemasAtividadesComplementares[0].linksSistemas[0].link,
+          },
           professor: infos.ProfessorResponsavelAC
         }
       }

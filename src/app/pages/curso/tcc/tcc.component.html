@@ -5,8 +5,8 @@
 
     <div *ngIf="dados.regulamentos">
         <h4 class="subtitulo">{{dados.regulamentos.titulo}}</h4>
-        <div *ngFor="let regulamento of dados.regulamentos.linksRegulamentos">
-            <a href="{{regulamento.link}}" target="_blank">{{regulamento.titulo}}</a>
+        <div *ngFor="let regulamento of dados.regulamentos.regulamentosComLink">
+            <a href="{{regulamento.link}}" target="_blank">{{regulamento.texto}}</a>
         </div>
     </div>
     <br>
@@ -14,6 +14,36 @@
     <div *ngIf="dados.sistema">
         <h4 class="subtitulo">{{dados.sistema.titulo}}</h4>
         <a href="{{dados.sistema.link}}" target="_blank">{{dados.sistema.texto}}</a>
+    </div>
+    <br>
+    
+    <div *ngIf="dados.manual">
+        <h4 class="subtitulo">{{dados.manual.titulo}}</h4>
+        <a href="{{dados.manual.link}}" target="_blank">{{dados.manual.texto}}</a>
+    </div>
+    <br>
+
+    <div *ngIf="dados.anexos">
+        <h4 class="subtitulo">{{dados.anexos.titulo}}</h4>
+        <div *ngFor="let anexo of dados.anexos.DocsAnexos">
+            <a href="{{anexo.media.data.attributes.url}}" target="_blank">{{anexo.texto}}</a>
+        </div>
+    </div>
+    <br>
+
+    <div *ngIf="dados.documentos">
+        <h4 class="subtitulo">{{dados.documentos.titulo}}</h4>
+        <div *ngFor="let documento of dados.documentos.DocsEntrega">
+            <a href="{{documento.media.data.attributes.url}}" target="_blank">{{documento.titulo}}</a>
+        </div>
+    </div>
+    <br>
+    
+    <div *ngIf="dados.processo">
+        <h4 class="subtitulo">Processo do TCC no curso:</h4>
+        <div class="row justify-content-center">
+            <img src="{{dados.processo.data.attributes.url}}" alt="logo" style="width: 80vw; max-width: 900px;">
+        </div>
     </div>
     <br>
     
@@ -48,7 +78,6 @@
         </ul>
     </div>
     <br>
-
 </div>
 
 <app-footer></app-footer>
