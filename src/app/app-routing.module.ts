@@ -18,6 +18,7 @@ import { LegislacaoComponent } from './pages/outros/legislacao/legislacao.compon
 import { HorarioCalendarioComponent } from './pages/outros/horario-calendario/horario-calendario.component';
 import { ProducaoAcademicaComponent } from './pages/atividades-producao/producao-academica/producao-academica.component';
 import { AtividadesComplementaresComponent } from './pages/curso/atividades-complementares/atividades-complementares.component';
+import { TccComponent } from './pages/curso/tcc/tcc.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -29,6 +30,7 @@ const routes: Routes = [
       {path:'matriz-curricular', component: MatrizCurricularComponent},
       {path:'atividades-complementares', component: AtividadesComplementaresComponent},
       {path:'estagio-curricular', component: EstagioCurricularComponent},
+      {path:'tcc', component: TccComponent},
       {path:'internacionalizacao', component: InternacionalizacaoComponent},
     ]},
     {path: 'noticias', children:[

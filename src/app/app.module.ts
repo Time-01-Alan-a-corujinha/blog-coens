@@ -30,6 +30,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { ProducaoAcademicaComponent } from './pages/atividades-producao/producao-academica/producao-academica.component';
 import { MatTableModule } from '@angular/material/table';
 import { AtividadesComplementaresComponent } from './pages/curso/atividades-complementares/atividades-complementares.component';
+import { TccComponent } from './pages/curso/tcc/tcc.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { AtividadesComplementaresComponent } from './pages/curso/atividades-comp
     HorarioCalendarioComponent,
     ProducaoAcademicaComponent,
     AtividadesComplementaresComponent,
+    TccComponent,
   ],
   imports: [
     BrowserModule,

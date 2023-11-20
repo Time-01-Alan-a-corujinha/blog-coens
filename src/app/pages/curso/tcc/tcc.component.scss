@@ -1,0 +1,17 @@
+.titulo {
+    font-family: 'Kreon', sans-serif;
+    font-weight: 600;
+}
+
+.titulo, a, .subtitulo {
+    color: #841A1E;
+}
+
+a {
+    text-decoration: none;
+    overflow-wrap: break-word;
+}
+
+a:hover {
+    text-decoration: underline;
+}
