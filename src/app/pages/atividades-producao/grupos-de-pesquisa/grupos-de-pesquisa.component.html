@@ -1,0 +1,10 @@
+<!-- grupos-de-pesquisa.component.html -->
+
+
+
+  <div *ngFor="let grupoDePesquisa of GruposDePesquisa.attributes.GrupoDePesquisa">
+    <h2>{{ grupoDePesquisa.nome }}</h2>
+    <p>{{ grupoDePesquisa.descricao }}</p>
+    <a href="{{ grupoDePesquisa.link }}" target="_blank">Saiba mais</a>
+  </div>
+
