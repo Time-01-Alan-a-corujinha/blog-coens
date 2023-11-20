@@ -1,0 +1,18 @@
+.titulo {
+    font-family: 'Kreon', sans-serif;
+    font-weight: 600;
+}
+
+.titulo, .subtitulo {
+    color: #841A1E !important;
+}
+
+::ng-deep a {
+    color: #841A1E !important;
+    text-decoration: none;
+    overflow-wrap: break-word;
+}
+
+::ng-deep a:hover {
+    text-decoration: underline;
+}
