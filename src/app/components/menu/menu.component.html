@@ -11,6 +11,7 @@
 <router-outlet></router-outlet>
 
 <mat-menu #menu="matMenu" class="menu-box">
+    <button mat-menu-item class="close-button"><mat-icon>close</mat-icon></button>
     <button mat-menu-item routerLink="">INÍCIO</button>
     <button mat-menu-item [matMenuTriggerFor]="curso">CURSO</button>
     <button mat-menu-item [matMenuTriggerFor]="noticias">NOTÍCIAS</button>
