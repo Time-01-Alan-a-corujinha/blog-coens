@@ -1,0 +1,22 @@
+<div class="px-5 spacer">
+    <h2 class="titulo pb-2">{{dados.titulo}}</h2>
+    <div id="descricao"></div>
+    <br>
+
+    <div *ngIf="dados.regulamento">
+        <h4 class="subtitulo">{{dados.regulamento.titulo}}</h4>
+        <a href="{{dados.regulamento.link}}" target="_blank">{{dados.regulamento.titulo}}</a>
+    </div>
+    <br>
+
+    <div *ngIf="dados.atas">
+        <h4 class="subtitulo">Atas do NDE</h4>
+        <div *ngFor="let ata of dados.atas">
+            <a href="{{ata.link}}" target="_blank">{{ata.titulo}}</a>
+        </div>
+    </div>
+    <br>
+
+</div>
+
+<app-footer></app-footer>
