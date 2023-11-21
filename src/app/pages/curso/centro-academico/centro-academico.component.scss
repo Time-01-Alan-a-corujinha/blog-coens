@@ -16,3 +16,26 @@
 ::ng-deep a:hover {
     text-decoration: underline;
 }
+
+.descricao {
+    justify-content: center;
+    gap: 15px;
+
+    div {
+        flex: 2;
+        min-width: 300px;
+    }
+
+    img {
+        flex: 3;
+        width: 20vw; 
+        max-width: 350px;
+        min-width: 300px;
+        height: fit-content;
+    }
+}
+
+.diretoria {
+    display: flex;
+    gap: 20px;
+}
