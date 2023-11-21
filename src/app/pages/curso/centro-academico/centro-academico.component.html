@@ -1,0 +1,50 @@
+<div class="px-5 spacer">
+    <h2 class="titulo pb-2 px-5">{{dados.titulo}}</h2>
+    
+    <div class="row descricao">
+        <img *ngIf="dados.linkImg" src="{{dados.linkImg}}" alt="logo">
+        <div id="descricao"></div>
+    </div>
+    <br>
+    
+    <h2 *ngIf="dados.diretoria" class="titulo py-2">Atual Diretoria do CAES</h2>
+    <div class="diretoria">
+        <div class="flex-fill">
+            <div *ngIf="dados.diretoria">
+                <h5 class="subtitulo">Diretoria Executiva:</h5>
+                <p class="m-0"><b>Presidente:</b> {{dados.diretoria.Diretoria.presidente}}</p>
+                <p class="m-0"><b>Vice-Presidente:</b> {{dados.diretoria.Diretoria.vicePresidente}}</p>
+                <p class="m-0"><b>Secretário Geral:</b> {{dados.diretoria.Diretoria.secretario}}</p>
+                <p class="m-0"><b>Tesoureiro:</b> {{dados.diretoria.Diretoria.tesoureiro}}</p>
+            </div>
+            <br>
+            
+            <div *ngIf="dados.diretoria">
+                <h5 class="subtitulo">Diretor de Assuntos Acadêmicos:</h5>
+                <p class="m-0">{{dados.diretoria.diretorDeAssuntosAcademicos}}</p>
+            </div>
+        </div>
+
+        <div class="flex-fill">
+            <div *ngIf="dados.diretoria">
+                <h5 class="subtitulo">Diretora de Movimento Estudantil:</h5>
+                <p class="m-0">{{dados.diretoria.diretorDeMovimentoEstudantil}}</p>
+            </div>
+            <br>
+            
+            <div *ngIf="dados.diretoria">
+                <h5 class="subtitulo">Diretor de Comunicação:</h5>
+                <p class="m-0">{{dados.diretoria.diretorDeComunicacao}}</p>
+            </div>
+            <br>
+            
+            <div *ngIf="dados.diretoria">
+                <h5 class="subtitulo">Diretor de Eventos Desportivos e Culturais:</h5>
+                <p class="m-0">{{dados.diretoria.diretorDeEventosDesportivosECulturais}}</p>
+            </div>
+        </div>        
+    </div>
+    <br>
+</div>
+
+<app-footer></app-footer>

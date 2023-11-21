@@ -31,6 +31,7 @@ import { ProducaoAcademicaComponent } from './pages/atividades-producao/producao
 import { MatTableModule } from '@angular/material/table';
 import { AtividadesComplementaresComponent } from './pages/curso/atividades-complementares/atividades-complementares.component';
 import { TccComponent } from './pages/curso/tcc/tcc.component';
+import { CentroAcademicoComponent } from './pages/curso/centro-academico/centro-academico.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { TccComponent } from './pages/curso/tcc/tcc.component';
     ProducaoAcademicaComponent,
     AtividadesComplementaresComponent,
     TccComponent,
+    CentroAcademicoComponent,
   ],
   imports: [
     BrowserModule,

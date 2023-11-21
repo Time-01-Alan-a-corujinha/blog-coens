@@ -11,6 +11,7 @@
 <router-outlet></router-outlet>
 
 <mat-menu #menu="matMenu" class="menu-box">
+    <button mat-menu-item class="close-button"><mat-icon>close</mat-icon></button>
     <button mat-menu-item routerLink="">INÍCIO</button>
     <button mat-menu-item [matMenuTriggerFor]="curso">CURSO</button>
     <button mat-menu-item [matMenuTriggerFor]="noticias">NOTÍCIAS</button>
@@ -39,7 +40,7 @@
     <button mat-menu-item routerLink="curso/atividades-complementares">ATIVIDADES COMPLEMENTARES</button>
     <button mat-menu-item routerLink="curso/estagio-curricular">ESTÁGIO CURRICULAR</button>
     <button mat-menu-item routerLink="curso/tcc">TRABALHO DE CONCLUSÃO DE CURSO</button>
-    <button mat-menu-item>CENTRO ACADÊMICO</button>
+    <button mat-menu-item routerLink="curso/centro-academico">CENTRO ACADÊMICO</button>
     <button mat-menu-item routerLink="curso/internacionalizacao">INTERCIONALIZAÇÃO</button>
 </mat-menu>
 
