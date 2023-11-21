@@ -2,12 +2,12 @@
     <h2 class="titulo pb-2 px-5">{{dados.titulo}}</h2>
     
     <div class="row descricao">
-        <img src="{{dados.linkImg}}" alt="logo">
+        <img *ngIf="dados.linkImg" src="{{dados.linkImg}}" alt="logo">
         <div id="descricao"></div>
     </div>
     <br>
     
-    <h2 class="titulo py-2">Atual Diretoria do CAES</h2>
+    <h2 *ngIf="dados.diretoria" class="titulo py-2">Atual Diretoria do CAES</h2>
     <div class="diretoria">
         <div class="flex-fill">
             <div *ngIf="dados.diretoria">
