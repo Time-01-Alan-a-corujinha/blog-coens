@@ -20,6 +20,7 @@ import { ProducaoAcademicaComponent } from './pages/atividades-producao/producao
 import { AtividadesComplementaresComponent } from './pages/curso/atividades-complementares/atividades-complementares.component';
 import { TccComponent } from './pages/curso/tcc/tcc.component';
 import { CentroAcademicoComponent } from './pages/curso/centro-academico/centro-academico.component';
+import { NucleoDocenteEstruturanteComponent } from './pages/coens/nucleo-docente-estruturante/nucleo-docente-estruturante.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -34,6 +35,9 @@ const routes: Routes = [
       {path:'tcc', component: TccComponent},
       {path:'centro-academico', component: CentroAcademicoComponent},
       {path:'internacionalizacao', component: InternacionalizacaoComponent},
+    ]},
+    {path: 'coens', children: [
+      {path: 'nucleo-docente', component: NucleoDocenteEstruturanteComponent}
     ]},
     {path: 'noticias', children:[
       {path:'', component:RecentesComponent},

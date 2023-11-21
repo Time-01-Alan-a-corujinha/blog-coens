@@ -32,6 +32,7 @@ import { MatTableModule } from '@angular/material/table';
 import { AtividadesComplementaresComponent } from './pages/curso/atividades-complementares/atividades-complementares.component';
 import { TccComponent } from './pages/curso/tcc/tcc.component';
 import { CentroAcademicoComponent } from './pages/curso/centro-academico/centro-academico.component';
+import { NucleoDocenteEstruturanteComponent } from './pages/coens/nucleo-docente-estruturante/nucleo-docente-estruturante.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { CentroAcademicoComponent } from './pages/curso/centro-academico/centro-
     AtividadesComplementaresComponent,
     TccComponent,
     CentroAcademicoComponent,
+    NucleoDocenteEstruturanteComponent,
   ],
   imports: [
     BrowserModule,
