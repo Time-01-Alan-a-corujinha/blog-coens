@@ -1,1 +1,23 @@
-<p>coordenacao works!</p>
+<div>
+    <P class="Titulo">{{dados.titulo}}</P>
+    <div class="d-flex flex-wrap">
+        <div class="Coordenador">
+            <img class="Foto" src="{{dados.coordenador.profileImagem.data.attributes.url}}" alt="Foto">
+            <p class="funcao">Coordenador</p>
+            <p class="Nome">{{dados.coordenador.nome}}</p>
+            <p class="NivelSuperior">{{dados.coordenador.nivelSuperior}}</p>
+            <a class="E-mail">{{dados.coordenador.email}}</a>
+            <a target="_blank" class="lattesLink" href="{{dados.coordenador.lattesLink}}">LattesLink</a>
+        </div>
+        <div class="Subst">
+            <img class="Foto" src="{{dados.coordenadorSubst.profileImagem.data.attributes.url}}" alt="Foto">
+            <p class="funcao">Coordenador Substituto </p>
+            <p class="Nome">{{dados.coordenadorSubst.nome}}</p>
+            <p class="NivelSuperior">{{dados.coordenadorSubst.nivelSuperior}}</p>
+            <a class="E-mail">{{dados.coordenadorSubst.email}}</a>
+            <a target="_blank" class="lattesLink" href="{{dados.coordenadorSubst.lattesLink}}">LattesLink</a>
+        </div>
+    </div>
+</div>
+<!-- <app-footer></app-footer> -->
+

@@ -11,6 +11,6 @@ export class CoordenacaoService {
   ) { }
 
   getCoordenacao(){
-    return this.httpConfig.get("coens-coordenacao" , "?populate[0]=Coordenador.profileImagem&populate[1]=CoordenadorSubst.profileImagem&populate[2]=AtasDaCoordenacao.atasDocs.docsAta")
+    return this.httpConfig.get("coens-coodenacao" , "?populate[0]=Coordenador.profileImagem&populate[1]=CoordenadorSubst.profileImagem&populate[2]=AtasDaCoordenacao.atasDocs.docsAta")
   }
 }

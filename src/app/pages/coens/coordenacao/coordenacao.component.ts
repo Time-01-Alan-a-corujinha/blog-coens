@@ -20,6 +20,13 @@ export class CoordenacaoComponent implements OnInit {
     this.CoordenacaoService.getCoordenacao().subscribe({
       next:(dados:any) => {
         const info = dados.data.attributes
+
+        this.dados = {
+          coordenador: info.Coordenador,
+          coordenadorSubst: info.CoordenadorSubst,
+          assessoria: info.descricao,
+          titulo: info.titulo
+        }
         console.log(this.dados)
       },error:(err) => {
         console.log(err)
