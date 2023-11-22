@@ -11,6 +11,7 @@ import { ConhecaOAlanComponent } from './pages/conheca-o-alan/conheca-o-alan.com
 import { DescricaoCursoComponent } from './pages/curso/descricao-curso/descricao-curso.component';
 import { MatrizCurricularComponent } from './pages/curso/matriz-curricular/matriz-curricular.component';
 import { DocentesComponent } from './pages/coens/docentes/docentes.component';
+import { CoordenacaoComponent } from './pages/coens/coordenacao/coordenacao.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -28,7 +29,8 @@ const routes: Routes = [
     {path: 'pos-graduacao', component: PosGraduacaoComponent},
     {path: 'conheca', component: ConhecaOAlanComponent},
     {path:'coens', children:[
-      {path:'docentes', component: DocentesComponent}
+      {path:'docentes', component: DocentesComponent},
+      {path:'coordenacao', component: CoordenacaoComponent}
     ]}
   ]},
 ];

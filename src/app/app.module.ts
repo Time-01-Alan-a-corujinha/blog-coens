@@ -21,6 +21,7 @@ import { ConhecaOAlanComponent } from './pages/conheca-o-alan/conheca-o-alan.com
 import { DescricaoCursoComponent } from './pages/curso/descricao-curso/descricao-curso.component';
 import { MatrizCurricularComponent } from './pages/curso/matriz-curricular/matriz-curricular.component';
 import { DocentesComponent } from './pages/coens/docentes/docentes.component';
+import { CoordenacaoComponent } from './pages/coens/coordenacao/coordenacao.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { DocentesComponent } from './pages/coens/docentes/docentes.component';
     DescricaoCursoComponent,
     MatrizCurricularComponent,
     DocentesComponent,
+    CoordenacaoComponent,
   ],
   imports: [
     BrowserModule,
