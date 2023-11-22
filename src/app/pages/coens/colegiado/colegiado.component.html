@@ -1,0 +1,45 @@
+<div class="px-5 spacer">
+    <h2 class="titulo pb-2">{{dados.titulo}}</h2>
+    <div id="descricao"></div>
+    <br>
+
+    <div *ngIf="dados.regulamento">
+        <h4 class="subtitulo">{{dados.regulamento.titulo}}</h4>
+        <a href="{{dados.regulamento.link}}" target="_blank">{{dados.regulamento.titulo}}</a>
+    </div>
+    <br>
+
+    <div id="membrosColegiado"></div>
+    <br>
+    
+    <div *ngIf="dados.atas">
+        <h4 class="subtitulo">Atas do NDE</h4>
+        <div align="center">
+            <div *ngFor="let ano of dados.atas" class="ata-ano">
+                <mat-accordion>
+                    <mat-expansion-panel (opened)="true" hideToggle>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                <h4 class="subtitulo m-0">{{ano.ano}}</h4>
+                            </mat-panel-title>
+                            
+                            <mat-panel-description class="justify-content-end m-0">
+                                <mat-icon class="dropdown-icon">assignment</mat-icon>
+                            </mat-panel-description>
+                        </mat-expansion-panel-header>
+        
+                        <div *ngFor="let ata of ano.AtasDoColegiado">
+                            <a href="{{ata.media.data.attributes.url}}" target="_blank">
+                                <h6>{{ata.texto}}</h6>
+                            </a>
+                        </div>
+                    </mat-expansion-panel>
+                </mat-accordion>
+            </div>
+        </div>
+    </div>
+    <br>
+
+</div>
+
+<app-footer></app-footer>
