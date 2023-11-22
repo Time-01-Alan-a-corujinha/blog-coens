@@ -33,6 +33,7 @@ import { AtividadesComplementaresComponent } from './pages/curso/atividades-comp
 import { TccComponent } from './pages/curso/tcc/tcc.component';
 import { CentroAcademicoComponent } from './pages/curso/centro-academico/centro-academico.component';
 import { NucleoDocenteEstruturanteComponent } from './pages/coens/nucleo-docente-estruturante/nucleo-docente-estruturante.component';
+import { ColegiadoComponent } from './pages/coens/colegiado/colegiado.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { NucleoDocenteEstruturanteComponent } from './pages/coens/nucleo-docente
     TccComponent,
     CentroAcademicoComponent,
     NucleoDocenteEstruturanteComponent,
+    ColegiadoComponent,
   ],
   imports: [
     BrowserModule,
