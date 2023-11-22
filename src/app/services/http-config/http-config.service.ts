@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class HttpConfigService {
-  private configUrl: string = "https://coens-strapi-back.onrender.com/api/"
+  private configUrl: string = window.location.hostname == "localhost" ? "http://localhost:1337/api/" : "https://coens-strapi-back.onrender.com/api/"
 
   constructor(private http: HttpClient) { }
 
