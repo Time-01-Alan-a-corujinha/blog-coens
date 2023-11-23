@@ -7,13 +7,13 @@ import { GruposDePesquisaService } from './grupos-de-pesquisa.service';
   styleUrls: ['./grupos-de-pesquisa.component.scss'],
 })
 export class GruposDePesquisaComponent implements OnInit {
-  GruposDePesquisa: any = [];
+  gruposDePesquisa: any;
 
-  constructor(private gruposDePesquisaService: GruposDePesquisaService) {}
+  constructor(private gruposService: GruposDePesquisaService) {}
 
-  ngOnInit(): void {
-    this.gruposDePesquisaService.getGruposDePesquisa().subscribe((data) => {
-      this.GruposDePesquisa = data;
+  ngOnInit() {
+    this.gruposService.getGruposDePesquisa().subscribe(data => {
+      this.gruposDePesquisa = data;
     });
   }
 }

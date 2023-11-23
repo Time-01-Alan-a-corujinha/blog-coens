@@ -1,10 +1,8 @@
-<!-- grupos-de-pesquisa.component.html -->
-
-
-
-  <div *ngFor="let grupoDePesquisa of GruposDePesquisa.attributes.GrupoDePesquisa">
-    <h2>{{ grupoDePesquisa.nome }}</h2>
-    <p>{{ grupoDePesquisa.descricao }}</p>
-    <a href="{{ grupoDePesquisa.link }}" target="_blank">Saiba mais</a>
+<div *ngIf="gruposDePesquisa">
+  <h2>{{ gruposDePesquisa.data.attributes.titulo }}</h2>
+  <div *ngFor="let grupo of gruposDePesquisa.data.attributes.GrupoDePesquisa">
+    <h3>{{ grupo.nome }}</h3>
+    <p>{{ grupo.descricao }}</p>
+    <a href="{{ grupo.link }}" target="_blank">Saiba mais</a>
   </div>
-
+</div>
