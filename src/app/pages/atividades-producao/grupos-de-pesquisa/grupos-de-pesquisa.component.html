@@ -1,4 +1,4 @@
-<div *ngIf="gruposDePesquisa">
+<div>
   <h2>{{ gruposDePesquisa.data.attributes.titulo }}</h2>
   <div *ngFor="let grupo of gruposDePesquisa.data.attributes.GrupoDePesquisa">
     <h3>{{ grupo.nome }}</h3>
@@ -6,3 +6,4 @@
     <a href="{{ grupo.link }}" target="_blank">Saiba mais</a>
   </div>
 </div>
+
