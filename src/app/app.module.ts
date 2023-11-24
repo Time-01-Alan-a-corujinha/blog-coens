@@ -14,7 +14,7 @@ import { BoxtextComponent } from './components/boxtext/boxtext.component';
 import { MeusPostsComponent } from './pages/noticias/meus-posts/meus-posts.component';
 import { RecentesComponent } from './pages/noticias/recentes/recentes.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { SafePipePipe } from './components/safe-pipe/safe-pipe.pipe';
 import { PosGraduacaoComponent } from './pages/pos-graduacao/pos-graduacao.component';
 import { ConhecaOAlanComponent } from './pages/conheca-o-alan/conheca-o-alan.component';
@@ -32,6 +32,11 @@ import { MatTableModule } from '@angular/material/table';
 import { AtividadesComplementaresComponent } from './pages/curso/atividades-complementares/atividades-complementares.component';
 import { TccComponent } from './pages/curso/tcc/tcc.component';
 import { GruposDePesquisaComponent } from './pages/atividades-producao/grupos-de-pesquisa/grupos-de-pesquisa.component';
+import { CentroAcademicoComponent } from './pages/curso/centro-academico/centro-academico.component';
+import { NucleoDocenteEstruturanteComponent } from './pages/coens/nucleo-docente-estruturante/nucleo-docente-estruturante.component';
+import { ColegiadoComponent } from './pages/coens/colegiado/colegiado.component';
+import { LoadingComponent } from './components/loading/loading.component';
+import { LoadingInterceptor } from './components/loading/loading.interceptor';
 
 @NgModule({
   declarations: [
@@ -59,6 +64,10 @@ import { GruposDePesquisaComponent } from './pages/atividades-producao/grupos-de
     AtividadesComplementaresComponent,
     TccComponent,
     GruposDePesquisaComponent,
+    CentroAcademicoComponent,
+    NucleoDocenteEstruturanteComponent,
+    ColegiadoComponent,
+    LoadingComponent,
   ],
   imports: [
     BrowserModule,
@@ -70,7 +79,13 @@ import { GruposDePesquisaComponent } from './pages/atividades-producao/grupos-de
     MatExpansionModule,
     MatTableModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: LoadingInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,41 @@
+.titulo {
+    font-family: 'Kreon', sans-serif;
+    font-weight: 600;
+}
+
+.titulo, .subtitulo {
+    color: #841A1E !important;
+}
+
+::ng-deep a {
+    color: #841A1E !important;
+    text-decoration: none;
+    overflow-wrap: break-word;
+}
+
+::ng-deep a:hover {
+    text-decoration: underline;
+}
+
+.descricao {
+    justify-content: center;
+    gap: 15px;
+
+    div {
+        flex: 2;
+        min-width: 300px;
+    }
+
+    img {
+        flex: 3;
+        width: 20vw; 
+        max-width: 350px;
+        min-width: 300px;
+        height: fit-content;
+    }
+}
+
+.diretoria {
+    display: flex;
+    gap: 20px;
+}
