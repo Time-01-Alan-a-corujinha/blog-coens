@@ -31,12 +31,12 @@ import { ProducaoAcademicaComponent } from './pages/atividades-producao/producao
 import { MatTableModule } from '@angular/material/table';
 import { AtividadesComplementaresComponent } from './pages/curso/atividades-complementares/atividades-complementares.component';
 import { TccComponent } from './pages/curso/tcc/tcc.component';
+import { GruposDePesquisaComponent } from './pages/atividades-producao/grupos-de-pesquisa/grupos-de-pesquisa.component';
 import { CentroAcademicoComponent } from './pages/curso/centro-academico/centro-academico.component';
 import { NucleoDocenteEstruturanteComponent } from './pages/coens/nucleo-docente-estruturante/nucleo-docente-estruturante.component';
 import { ColegiadoComponent } from './pages/coens/colegiado/colegiado.component';
 import { LoadingComponent } from './components/loading/loading.component';
 import { LoadingInterceptor } from './components/loading/loading.interceptor';
-
 
 @NgModule({
   declarations: [
@@ -63,6 +63,7 @@ import { LoadingInterceptor } from './components/loading/loading.interceptor';
     ProducaoAcademicaComponent,
     AtividadesComplementaresComponent,
     TccComponent,
+    GruposDePesquisaComponent,
     CentroAcademicoComponent,
     NucleoDocenteEstruturanteComponent,
     ColegiadoComponent,

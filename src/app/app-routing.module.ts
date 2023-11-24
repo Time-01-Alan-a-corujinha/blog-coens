@@ -19,6 +19,7 @@ import { HorarioCalendarioComponent } from './pages/outros/horario-calendario/ho
 import { ProducaoAcademicaComponent } from './pages/atividades-producao/producao-academica/producao-academica.component';
 import { AtividadesComplementaresComponent } from './pages/curso/atividades-complementares/atividades-complementares.component';
 import { TccComponent } from './pages/curso/tcc/tcc.component';
+import { GruposDePesquisaComponent } from './pages/atividades-producao/grupos-de-pesquisa/grupos-de-pesquisa.component';
 import { CentroAcademicoComponent } from './pages/curso/centro-academico/centro-academico.component';
 import { NucleoDocenteEstruturanteComponent } from './pages/coens/nucleo-docente-estruturante/nucleo-docente-estruturante.component';
 import { ColegiadoComponent } from './pages/coens/colegiado/colegiado.component';
@@ -47,7 +48,8 @@ const routes: Routes = [
     ]},
     {path: 'atividades-producao', children: [
       {path: 'producao-academica', component: ProducaoAcademicaComponent},
-      {path: 'projetos-extensao', component: ProjetosExtensaoComponent}
+      {path: 'projetos-extensao', component: ProjetosExtensaoComponent},
+      {path: 'grupos-de-pesquisa', component: GruposDePesquisaComponent},
     ]},
     {path: 'outros', children: [
       {path: 'horario-calendario', component: HorarioCalendarioComponent},
