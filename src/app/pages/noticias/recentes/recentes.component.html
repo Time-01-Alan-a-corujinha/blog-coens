@@ -1,15 +1,16 @@
-<div class="px-5 spacer">
-    <h2 class="titulo pb-2">{{dados.titulo}}</h2>
-    
-    <div *ngIf="dados.noticias">
-        <div class="noticia" *ngFor="let noticia of dados.noticias; index as i; first as first; last as last">
+<div class="px-5 spacer d-flex justify-content-center">
+    <div *ngIf="dados.noticias" class="col-sm-12 col-md-10 col-lg-8">
+        <h2 class="titulo pb-2">{{dados.titulo}}</h2>
+        <div class="noticia" *ngFor="let noticia of dados.noticias; index as i; first as first; last as last" style="display: flex; justify-content: center;">
             <br>
-            <div class="d-flex">
-                <img *ngIf="noticia.midia" src="{{noticia.midia.formats.thumbnail.url}}">
-                <div>
-                    <h4 class="subtitulo">{{noticia.titulo}}</h4>
-                    <p [id]="'conteudo'+i">{{noticia.conteudo}}</p>
-                    <p class="data-publicacao">{{noticia.dataPublicacao}}</p>
+            <div class="row">
+                <h4 class="subtitulo pb-2">{{noticia.titulo}}</h4>
+                <div class="d-flex pb-2" style="justify-content: center; gap: 10px;">
+                    <img *ngIf="noticia.midia" src="{{noticia.midia.formats.thumbnail.url}}">
+                    <div>
+                        <p [id]="'conteudo'+i">{{noticia.conteudo}}</p>
+                        <p class="data-publicacao">{{noticia.dataPublicacao}}</p>
+                    </div>
                 </div>
             </div>
     
