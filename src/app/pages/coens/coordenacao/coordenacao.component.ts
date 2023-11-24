@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CoordenacaoService } from './coordenacao.service';
+import { TextoUtils } from 'src/app/services/texto-util/texto-util';
 
 @Component({
   selector: 'app-coordenacao',
@@ -21,10 +22,11 @@ export class CoordenacaoComponent implements OnInit {
       next:(dados:any) => {
         const info = dados.data.attributes
 
+        TextoUtils.preencheElementoDOM("Assessoria", TextoUtils.markDownParaHtml(info.descricao));
+
         this.dados = {
           coordenador: info.Coordenador,
           coordenadorSubst: info.CoordenadorSubst,
-          assessoria: info.descricao,
           titulo: info.titulo
         }
         console.log(this.dados)
