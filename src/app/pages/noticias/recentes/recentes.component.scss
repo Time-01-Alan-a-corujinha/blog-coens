@@ -9,6 +9,7 @@
 
 ::ng-deep a {
     text-decoration: none;
+    font-weight: 500;
 }
 
 ::ng-deep a:hover {
@@ -23,8 +24,28 @@ p {
     margin: 0;
 }
 
+.texto-e-data {
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .data-publicacao {
     font-family: 'Kreon', sans-serif;
     font-size: medium;
-    float: right;
+    text-align: end;
+}
+
+.informacoes {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+@media (max-width: 560px) {
+    .informacoes {
+        flex-direction: column;
+        align-items: center;
+    }
 }
