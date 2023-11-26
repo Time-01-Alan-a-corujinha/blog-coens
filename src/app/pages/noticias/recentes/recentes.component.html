@@ -1,1 +1,27 @@
-<p>recentes works!</p>
+<div class="px-5 spacer d-flex justify-content-center">
+    <div *ngIf="dados.noticias" class="col-sm-12 col-md-10 col-lg-8">
+        <h2 class="titulo pb-2">{{dados.titulo}}</h2>
+
+        <div class="noticia" *ngFor="let noticia of dados.noticias; index as i; first as first; last as last">
+            <div>
+                <h4 class="subtitulo pb-2">{{noticia.titulo}}</h4>
+                <div class="informacoes">
+                    <div *ngIf="noticia.midia">
+                        <img src="{{noticia.midia.formats.thumbnail.url}}" alt="imagem-noticia">
+                    </div>
+                    <div class="texto-e-data">
+                        <p [id]="'conteudo'+i">{{noticia.conteudo}}</p>
+                        <p class="data-publicacao">{{noticia.dataPublicacao}}</p>
+                    </div>
+                </div>
+            </div>
+            <hr *ngIf="!last">
+        </div>
+        <br>
+        <mat-paginator [length]="totalNoticias" [pageSize]="5" [hidePageSize]="true" (page)="trocaPagina($event)">
+        </mat-paginator>
+        <br>
+</div>
+</div>
+
+<app-footer></app-footer>

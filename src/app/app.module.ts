@@ -37,6 +37,7 @@ import { NucleoDocenteEstruturanteComponent } from './pages/coens/nucleo-docente
 import { ColegiadoComponent } from './pages/coens/colegiado/colegiado.component';
 import { LoadingComponent } from './components/loading/loading.component';
 import { LoadingInterceptor } from './components/loading/loading.interceptor';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -78,6 +79,7 @@ import { LoadingInterceptor } from './components/loading/loading.interceptor';
     HttpClientModule,
     MatExpansionModule,
     MatTableModule,
+    MatPaginatorModule,
   ],
   providers: [
     {
