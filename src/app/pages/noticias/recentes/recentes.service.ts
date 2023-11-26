@@ -8,7 +8,7 @@ export class RecentesService {
 
   constructor(private httpConfig: HttpConfigService) { }
 
-  getPostsRecentes() {
-    return this.httpConfig.get("posts")
+  getPostsRecentes(paginacao?: number) {
+    return paginacao ? this.httpConfig.get("posts", `?pagination[page]=${paginacao}&pagination[pageSize]=5&populate=*`) : this.httpConfig.get("posts")
   }
 }

@@ -49,3 +49,14 @@ p {
         align-items: center;
     }
 }
+
+::ng-deep .mat-paginator-range-actions {
+    .mat-paginator-range-label {
+        color: #555;
+        font-size: 15px;
+    }
+
+    button:not(:disabled) .mat-button-wrapper {
+        color: #841A1E !important;
+    }
+}

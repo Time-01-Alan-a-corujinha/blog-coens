@@ -11,4 +11,8 @@ export class TextoUtils {
         let element = document.getElementById(id);        
         element ? element.innerHTML = texto : null
     }
+
+    static converteData(data: string): string { //aaaa-mm-dd
+      return `${data.slice(8, 10)}/${data.slice(5, 7)}/${data.slice(0, 4)}`
+    }
 }
