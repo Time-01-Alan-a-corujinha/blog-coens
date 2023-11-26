@@ -1,20 +1,27 @@
 import { Component, OnInit } from '@angular/core';
 import { RecentesService } from './recentes.service';
 import { TextoUtils } from 'src/app/services/texto-util/texto-util';
+import { MatPaginatorIntl } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-recentes',
   templateUrl: './recentes.component.html',
   styleUrls: ['./recentes.component.scss']
 })
-export class RecentesComponent implements OnInit {
+export class RecentesComponent extends MatPaginatorIntl {
+  override nextPageLabel = 'Próxima página';
+  override previousPageLabel = 'Página anterior';
+  override firstPageLabel = 'Primeira página';
+  override lastPageLabel = 'Última página';
 
   public dados: any = []
   public pageCount: number = 1;
   public totalNoticias: number = 5;
   public paginaAtual: number = 1
   
-  constructor(private recentesService: RecentesService) { }
+  constructor(private recentesService: RecentesService) {
+    super();
+  }
 
   ngOnInit(): void {
     this.buscarDados()

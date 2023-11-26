@@ -18,7 +18,7 @@
             <hr *ngIf="!last">
         </div>
         <br>
-        <mat-paginator [length]="totalNoticias" [pageSize]="5" [hidePageSize]="true" (page)="trocaPagina($event)">
+        <mat-paginator [length]="totalNoticias" [pageSize]="5" [hidePageSize]="true" (page)="trocaPagina($event)" [showFirstLastButtons]="true">
         </mat-paginator>
         <br>
 </div>
