@@ -1,16 +1,21 @@
-<div>
+<div class="px-4 spacer">
     <div *ngIf="dados.docentes" class="infos">
-        <P class="Titulo">{{dados.titulo}}</P>
-        <div class="d-flex flex-wrap">
-            <div class="Lista"  *ngFor="let item of dados.docentes; last as last">
-                <img class="Foto" src="{{item.profileImagem.data.attributes.url}}" alt="Foto">
-                <h4 class="Nome">{{item.nome}}</h4>
-                <p class="NivelSuperior">{{item.nivelSuperior}}</p>
-                <a class="E-mail">{{item.email}}</a><br>
-                <a target="_blank" class="lattesLink" href="{{item.lattesLink}}">LattesLink</a>
-                <hr *ngIf="!last">
+        <h2 class="titulo pb-2 col-lg-10 col-md-10 col-12">{{dados.titulo}}</h2>
+        <div class="d-flex flex-wrap justify-content-center col-lg-10 col-md-10 col-sm-12">
+            <div *ngFor="let item of dados.docentes; last as last" class="lista px-4 col-lg-6 col-md-12">
+                <div class="w-100">
+                    <img class="foto m-2" src="{{item.profileImagem.data.attributes.url}}" alt="Foto">
+                    <div class="informacoes m-2">
+                        <h4 class="nome">{{item.nome}}</h4>
+                        <p class="nivelSuperior">{{item.nivelSuperior}}</p>
+                        <a class="email" href="mailto:{{item.email}}">{{item.email}}</a>
+                        <a class="lattesLink" target="_blank" href="{{item.lattesLink}}">Lattes</a>
+                    </div>
+                </div>
+                <hr>
             </div>
-        </div>    
+        </div>
     </div>
 </div>
+
 <app-footer></app-footer>
