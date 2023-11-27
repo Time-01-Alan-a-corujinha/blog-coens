@@ -1,0 +1,43 @@
+.titulo {
+    font-family: 'Kreon', sans-serif;
+    font-weight: 600;
+}
+
+.titulo, a, .subtitulo {
+    color: #841A1E;
+}
+
+a {
+    text-decoration: none;
+    overflow-wrap: break-word;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.lista {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    gap: 15px;
+}
+
+.item img {
+    width: 40vw;
+    max-width: 250px;
+    height: fit-content;
+    flex: 1;
+}
+
+h4 {
+    flex: 1;
+}

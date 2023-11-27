@@ -11,6 +11,7 @@
 <router-outlet></router-outlet>
 
 <mat-menu #menu="matMenu" class="menu-box">
+    <button mat-menu-item class="close-button"><mat-icon>close</mat-icon></button>
     <button mat-menu-item routerLink="">INÍCIO</button>
     <button mat-menu-item [matMenuTriggerFor]="curso">CURSO</button>
     <button mat-menu-item [matMenuTriggerFor]="noticias">NOTÍCIAS</button>
@@ -36,35 +37,35 @@
 <mat-menu #curso="matMenu" class="menu-box">
     <button mat-menu-item routerLink="curso">DESCRIÇÃO DO CURSO</button>
     <button mat-menu-item routerLink="curso/matriz-curricular">MATRIZ CURRICULAR</button>
-    <button mat-menu-item>ATIVIDADES</button>
-    <button mat-menu-item>COMPLEMENTARES</button>
-    <button mat-menu-item>ESTÁGIO CURRICULAR</button>
-    <button mat-menu-item>TRABALHO DE CONCLUSÃO DE CURSO</button>
-    <button mat-menu-item>CENTRO ACADÊMICO</button>
-    <button mat-menu-item>INTERCIONALIZAÇÃO</button>
+    <button mat-menu-item routerLink="curso/atividades-complementares">ATIVIDADES COMPLEMENTARES</button>
+    <button mat-menu-item routerLink="curso/estagio-curricular">ESTÁGIO CURRICULAR</button>
+    <button mat-menu-item routerLink="curso/tcc">TRABALHO DE CONCLUSÃO DE CURSO</button>
+    <button mat-menu-item routerLink="curso/centro-academico">CENTRO ACADÊMICO</button>
+    <button mat-menu-item routerLink="curso/internacionalizacao">INTERCIONALIZAÇÃO</button>
 </mat-menu>
 
 <mat-menu #coens="matMenu" class="menu-box">
     <button mat-menu-item routerLink="coens/coordenacao">COORDENAÇÃO</button>
     <button mat-menu-item routerLink="coens/docentes">DOCENTES</button>
-    <button mat-menu-item>NÚCLEO DOCENTES</button>
-    <button mat-menu-item>ESTRUTURANTE</button>
-    <button mat-menu-item>COLEGIADO</button>
+    <button mat-menu-item routerLink="coens/nucleo-docente">NÚCLEO DOCENTES ESTRUTURANTE</button>
+    <button mat-menu-item routerLink="coens/colegiado">COLEGIADO</button>
 </mat-menu>
 
 <mat-menu #atividades="matMenu" class="menu-box">
-    <button mat-menu-item>PRODUÇÃO ACADÊMICA</button>
-    <button mat-menu-item>GRUPOS DE PESQUISA</button>
-    <button mat-menu-item>PROJETOS DE EXTENSÃO</button>
+    <button mat-menu-item routerLink="atividades-producao/producao-academica">PRODUÇÃO ACADÊMICA</button>
+    <button mat-menu-item routerLink="atividades-producao/grupos-de-pesquisa">GRUPOS DE PESQUISA</button>
+    <button mat-menu-item routerLink="atividades-producao/projetos-extensao">PROJETOS DE EXTENSÃO</button>
 </mat-menu>
 
 <mat-menu #sistemas="matMenu" class="menu-box">
-    <button mat-menu-item>SIACOES</button>
-    <button mat-menu-item>SIEMCE</button>
+    <a *ngFor="let sistema of listaSistemas" 
+        href="{{sistema.link}}" target="_blank">
+        <button mat-menu-item>{{sistema.titulo}}</button>
+    </a>
 </mat-menu>
 
 <mat-menu #outros="matMenu" class="menu-box">
-    <button mat-menu-item>HORÁRIOS E CALENDÁRIOS</button>
-    <button mat-menu-item>LEGISLAÇÃO</button>
-    <button mat-menu-item>LOGOMARCAS</button>
+    <button mat-menu-item routerLink="outros/horario-calendario">HORÁRIOS E CALENDÁRIOS</button>
+    <button mat-menu-item routerLink="outros/legislacao">LEGISLAÇÃO</button>
+    <button mat-menu-item routerLink="outros/logomarcas">LOGOMARCAS</button>
 </mat-menu>

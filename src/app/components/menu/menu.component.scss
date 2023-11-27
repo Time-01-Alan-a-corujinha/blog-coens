@@ -15,11 +15,11 @@
 }
 
 ::ng-deep .menu-box {
-    background: linear-gradient(#EBE6E6, #ffffff94);
+    background: linear-gradient(#EBE6E6, #ffffff);
     box-shadow: none;
 }
 
-::ng-deep .menu-box button {
+::ng-deep .menu-box button, a {
     color: #841A1E;
     font-size: 18px;
     font-family: 'Kreon', sans-serif;
@@ -29,7 +29,29 @@
     max-width: 265px !important;
 }
 
+::ng-deep .cdk-overlay-connected-position-bounding-box {
+    margin-top: -30px;
+}
+
 button {
     text-wrap: wrap;
     line-height: normal;
+}
+
+.close-button {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 13px;
+    
+    mat-icon {
+        color: #841A1E;
+        margin: 0;
+    }
+}
+
+a {
+    text-decoration: none;
 }

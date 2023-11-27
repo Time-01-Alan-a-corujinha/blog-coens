@@ -1,1 +1,12 @@
-<p>pos-graduacao works!</p>
+<div class="spacer px-5">
+  <h2 class="titulo pb-2">{{dados.titulo}}</h2>
+  
+  <div class="lista">
+    <div *ngFor="let item of dados.listaPos" class="item col-8">
+      <img src="{{item.imagemDoCurso.data.attributes.url}}" alt="ImagemPós">
+      <h4 class="subtitulo"><a href="{{item.linkDoCurso}}" target="_blank">{{item.nomeDoCurso}}</a></h4>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

@@ -1,0 +1,54 @@
+<div class="px-5 spacer">
+    <h2 class="titulo pb-2">{{dados.titulo}}</h2>
+    <div id="descricao"></div>
+    <br>
+
+    <div *ngIf="dados.regulamentos">
+        <h4 class="subtitulo">{{dados.regulamentos.titulo}}</h4>
+        <div *ngFor="let regulamento of dados.regulamentos.linksRegulamentos">
+            <a href="{{regulamento.link}}" target="_blank">{{regulamento.titulo}}</a>
+        </div>
+    </div>
+    <br>
+
+    <div *ngIf="dados.sistema">
+        <h4 class="subtitulo">{{dados.sistema.titulo}}</h4>
+        <a href="{{dados.sistema.link}}" target="_blank">{{dados.sistema.texto}}</a>
+    </div>
+    <br>
+    
+    <div *ngIf="dados.professor">
+        <h4 class="subtitulo">{{dados.professor.titulo}}</h4>
+        <ul>
+            <li *ngIf="dados.professor.nomeProf">
+                <p class="m-0">
+                    <b>Professor: </b>{{dados.professor.nomeProf}}
+                </p>
+            </li>
+            <li *ngIf="dados.professor.telefoneProf">
+                <p class="m-0">
+                    <b>Telefone: </b>{{dados.professor.telefoneProf}}
+                </p>
+            </li>
+            <li *ngIf="dados.professor.emailProf">
+                <p class="m-0">
+                    <b>E-mail: </b><a href="mailto:{{dados.professor.emailProf}}">{{dados.professor.emailProf}}</a>
+                </p>
+            </li>
+            <li *ngIf="dados.professor.emailUniversidade">
+                <p class="m-0">
+                    <b>E-mail universidade: </b><a href="mailto:{{dados.professor.emailUniversidade}}">{{dados.professor.emailUniversidade}}</a>
+                </p>
+            </li>
+            <li *ngIf="dados.professor.linkDeAjuda">
+                <p class="m-0">
+                    <b>Link de ajuda: </b><a href="{{dados.professor.linkDeAjuda}}" target="_blank">{{dados.professor.linkDeAjuda}}</a>
+                </p>
+            </li>
+        </ul>
+    </div>
+    <br>
+
+</div>
+
+<app-footer></app-footer>
