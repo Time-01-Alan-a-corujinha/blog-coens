@@ -23,7 +23,7 @@ export class InicioComponent implements OnInit {
   buscarDados() {
     this.inicioService.getInicio().subscribe({
       next: (dados: any) => {
-        const infos = dados.data.attributes
+        const infos = dados.data.attributes 
         
         TextoUtils.preencheElementoDOM("texto", TextoUtils.markDownParaHtml(infos.descricao));
         

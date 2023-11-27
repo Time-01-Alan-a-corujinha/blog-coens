@@ -1,0 +1,42 @@
+<div class="px-4 spacer">
+    <h2 class="titulo pb-2">{{dados.titulo}}</h2>
+
+    <div class="cordenadores" *ngIf="dados.coordenador">
+        <h4 class="subtitulo funcao">Coordenador</h4>
+        <div class="coordenador">
+            <img class="foto" src="{{dados.coordenador.profileImagem.data.attributes.url}}" alt="Foto">
+            <div class="infos">
+                <p class="nome">{{dados.coordenador.nome}}</p>
+                <p class="nivelSuperior">{{dados.coordenador.nivelSuperior}}</p>
+                <a class="email">{{dados.coordenador.email}}</a>
+                <a target="_blank" class="lattesLink" href="{{dados.coordenador.lattesLink}}">Lattes</a>
+            </div>
+        </div>
+        <br>
+
+        <h4 class="subtitulo funcao">Coordenador Substituto</h4>
+        <div class="subst">
+            <img class="foto" src="{{dados.coordenadorSubst.profileImagem.data.attributes.url}}" alt="Foto">
+            <div class="infos">
+                <p class="nome">{{dados.coordenadorSubst.nome}}</p>
+                <p class="nivelSuperior">{{dados.coordenadorSubst.nivelSuperior}}</p>
+                <a class="email">{{dados.coordenadorSubst.email}}</a>
+                <a target="_blank" class="lattesLink" href="{{dados.coordenadorSubst.lattesLink}}">Lattes</a>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div id="assessoria"></div>
+    <br>
+
+    <div *ngIf="dados.atas">
+        <h4 class="subtitulo pb-2">{{dados.atas.titulo}}</h4>
+        <div *ngFor="let ata of dados.atas.atasDocs">
+            <a href="{{ata.docsAta.data[0].attributes.url}}" target="_blank">{{ata.texto}}</a>
+        </div>
+    </div>
+    <br>
+</div>
+
+<app-footer></app-footer>

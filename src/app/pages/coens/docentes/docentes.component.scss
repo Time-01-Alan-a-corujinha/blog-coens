@@ -1,0 +1,65 @@
+.infos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo {
+    font-family: 'Kreon', sans-serif;
+    font-weight: 600;
+    color: #841A1E;
+}
+
+.lista {
+    align-content: center;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    
+    .foto {
+        float: left;
+        min-width: 60px;
+        max-width: 120px;
+        border-radius: 100%;
+    }
+
+    .informacoes {
+        display: flex;
+        flex-direction: column;
+        min-width: 180px;
+
+        .nome {
+            font-family: 'Kreon', sans-serif; 
+            color: #841A1E;
+            float: left;
+        }
+    
+        .email,
+        .lattesLink {
+            color: inherit;
+            text-decoration: none;
+            font-family: 'Kreon', sans-serif;
+            font-size: 18px;
+            color: #841A1E;
+        }
+    
+        .email:hover, .lattesLink:hover {
+            text-decoration: underline;
+        }
+    
+        .nivelSuperior {
+            font-family: 'Kreon', sans-serif;
+            font-size: 20px;
+        }
+    }
+}
+
+a {
+    overflow-wrap: break-word;
+}
+
+p {
+    margin: 0;
+}

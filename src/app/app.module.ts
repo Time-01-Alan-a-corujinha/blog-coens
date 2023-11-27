@@ -20,6 +20,8 @@ import { PosGraduacaoComponent } from './pages/pos-graduacao/pos-graduacao.compo
 import { ConhecaOAlanComponent } from './pages/conheca-o-alan/conheca-o-alan.component';
 import { DescricaoCursoComponent } from './pages/curso/descricao-curso/descricao-curso.component';
 import { MatrizCurricularComponent } from './pages/curso/matriz-curricular/matriz-curricular.component';
+import { DocentesComponent } from './pages/coens/docentes/docentes.component';
+import { CoordenacaoComponent } from './pages/coens/coordenacao/coordenacao.component';
 import { ProjetosExtensaoComponent } from './pages/atividades-producao/projetos-extensao/projetos-extensao.component';
 import { EstagioCurricularComponent } from './pages/curso/estagio-curricular/estagio-curricular.component';
 import { InternacionalizacaoComponent } from './pages/curso/internacionalizacao/internacionalizacao.component';
@@ -55,6 +57,8 @@ import { MatPaginatorModule, MatPaginatorIntl } from '@angular/material/paginato
     ConhecaOAlanComponent,
     DescricaoCursoComponent,
     MatrizCurricularComponent,
+    DocentesComponent,
+    CoordenacaoComponent,
     ProjetosExtensaoComponent,
     EstagioCurricularComponent,
     InternacionalizacaoComponent,
