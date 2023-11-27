@@ -22,14 +22,14 @@ export class CoordenacaoComponent implements OnInit {
       next:(dados:any) => {
         const info = dados.data.attributes
 
-        TextoUtils.preencheElementoDOM("Assessoria", TextoUtils.markDownParaHtml(info.descricao));
+        TextoUtils.preencheElementoDOM("assessoria", TextoUtils.markDownParaHtml(info.descricao));
 
         this.dados = {
           coordenador: info.Coordenador,
           coordenadorSubst: info.CoordenadorSubst,
+          atas: info.AtasDaCoordenacao,
           titulo: info.titulo
         }
-        console.log(this.dados)
       },error:(err) => {
         console.log(err)
       }
