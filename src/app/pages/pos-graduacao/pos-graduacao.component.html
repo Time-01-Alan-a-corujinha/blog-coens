@@ -1,27 +1,12 @@
-<head>
-    <title>Pós-Graduação</title>
-</head>
-  <body>
-    <header class="cabeçalho">
-      <img src="assets/logo.png" alt="logo alan a corujinha" class="logoalan">
-      <img src="assets/logo-2.png" alt="logo engenharia de software" class="logoengsoft">
-    </header>
-    <main>
-      <h3 class="subtitulo"> PÓS-GRADUAÇÃO</h3>
-      <section class="pospython">
-        <img src="assets/TPnN.png" alt="logo tecnologia python" class="posTPpN">
-        <h4 class="esp1"><a href="https://coens.dv.utfpr.edu.br/pos/python/">Especialização em Tecnologia Python para Negócios</a></h4>
-      </section>
-      <section class="poscdados">
-        <img src="assets/CdD.png" alt="logo ciencia de dados" class="posCdD">
-        <h4 class="esp2"><a href="https://coens.dv.utfpr.edu.br/pos/ciencia-dados/">Especialização em Ciência de Dados</a></h4>
-      </section>
-    </main>
-    <footer>
-      <p class="rodape"></p>
-      <img src="assets/logo-curso-fundo-transp1.png" alt="logo do curso" class="logocurso">
-      <img src="assets/fale-conosco.png" alt="fale conosco" class="faleconosco">
-      <img src="assest/endereco.png" alt="localização" class="endereco">
-      <img src="assets/assinatura_UTFPR_DV1.png" alt="logo UTFPR campus Dois Vizinhos" class="logoutfprdv">
-    </footer>
-  </body>
+<div class="spacer px-5">
+  <h2 class="titulo pb-2">{{dados.titulo}}</h2>
+  
+  <div class="lista">
+    <div *ngFor="let item of dados.listaPos" class="item col-8">
+      <img src="{{item.imagemDoCurso.data.attributes.url}}" alt="ImagemPós">
+      <h4 class="subtitulo"><a href="{{item.linkDoCurso}}" target="_blank">{{item.nomeDoCurso}}</a></h4>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
