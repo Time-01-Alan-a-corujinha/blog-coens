@@ -33,6 +33,9 @@ export class AtividadesComplementaresComponent implements OnInit {
           },
           professor: infos.ProfessorResponsavelAC
         }
+      }, 
+      error: (err) => {
+        console.log(err)
       }
     })
   }

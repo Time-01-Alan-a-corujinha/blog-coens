@@ -43,6 +43,9 @@ export class InternacionalizacaoComponent implements OnInit {
           emailUniversidade: infos.professorResponsavelInternacionalizacao.emailUniversidade,
           linkDeAjuda: infos.professorResponsavelInternacionalizacao.linkDeAjuda,
         }
+      }, 
+      error: (err) => {
+        console.log(err)
       }
     })
   }

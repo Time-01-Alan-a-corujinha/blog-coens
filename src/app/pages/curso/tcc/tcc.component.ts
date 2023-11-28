@@ -41,6 +41,9 @@ export class TccComponent implements OnInit {
           processo: infos.fluxoTCC,
           professor: infos.ProfessorResponsavelTCC,
         }
+      }, 
+      error: (err) => {
+        console.log(err)
       }
     })
   }

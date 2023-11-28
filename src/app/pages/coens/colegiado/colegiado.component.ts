@@ -32,6 +32,9 @@ export class ColegiadoComponent implements OnInit {
           },
           atas: infos.AtasColegiado
         }        
+      }, 
+      error: (err) => {
+        console.log(err)
       }
     })
   }

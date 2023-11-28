@@ -25,7 +25,8 @@ export class PosGraduacaoComponent implements OnInit {
           titulo: infos.titulo,
           listaPos: infos.CursoPosGraduacao
         }
-      }, error: (err) => {
+      }, 
+      error: (err) => {
         console.log(err)
       }
     });

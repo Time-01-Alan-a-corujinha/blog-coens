@@ -27,6 +27,9 @@ export class MenuComponent implements OnInit {
             link: sistema.attributes.linkSistema
           })
         });
+      }, 
+      error: (err) => {
+        console.log(err)
       }
     })
   }

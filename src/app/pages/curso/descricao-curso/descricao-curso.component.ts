@@ -32,6 +32,9 @@ export class DescricaoCursoComponent implements OnInit {
         TextoUtils.preencheElementoDOM("texto-descricao", TextoUtils.markDownParaHtml(infos.descricao));
         this.dados.projeto.texto = infos.projetoPedagogico.texto
         this.dados.projeto.linkPdf = infos.projetoPedagogico.media.data.attributes.url
+      }, 
+      error: (err) => {
+        console.log(err)
       }
     })
   }

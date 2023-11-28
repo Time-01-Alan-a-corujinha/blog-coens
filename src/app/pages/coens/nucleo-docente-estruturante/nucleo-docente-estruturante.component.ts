@@ -36,6 +36,9 @@ export class NucleoDocenteEstruturanteComponent implements OnInit {
             }
           )
         }
+      }, 
+      error: (err) => {
+        console.log(err)
       }
     })
   }

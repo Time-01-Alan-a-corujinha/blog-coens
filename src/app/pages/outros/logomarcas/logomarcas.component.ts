@@ -21,6 +21,9 @@ export class LogomarcasComponent implements OnInit {
         dados.data.forEach((imagem: any) => {
           this.listaImagens.push(imagem.attributes.logomarca.data.attributes)
         })
+      }, 
+      error: (err) => {
+        console.log(err)
       }
     })
   }
