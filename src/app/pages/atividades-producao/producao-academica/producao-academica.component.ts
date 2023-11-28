@@ -34,6 +34,9 @@ export class ProducaoAcademicaComponent implements OnInit {
           link: infos.link,
           listaProducoes: listaProducoes
         }
+      }, 
+      error: (err) => {
+        console.log(err)
       }
     })
   }

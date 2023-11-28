@@ -3,11 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { MenuComponent } from './components/menu/menu.component';
-import { LoginComponent } from './pages/login/login.component';
-import { RecentesComponent } from './pages/noticias/recentes/recentes.component';
-import { MeusPostsComponent } from './pages/noticias/meus-posts/meus-posts.component';
+import { NoticiasComponent } from './pages/noticias/noticias.component';
 import { PosGraduacaoComponent } from './pages/pos-graduacao/pos-graduacao.component';
-import { ConhecaOAlanComponent } from './pages/conheca-o-alan/conheca-o-alan.component';
 import { DescricaoCursoComponent } from './pages/curso/descricao-curso/descricao-curso.component';
 import { MatrizCurricularComponent } from './pages/curso/matriz-curricular/matriz-curricular.component';
 import { DocentesComponent } from './pages/coens/docentes/docentes.component';
@@ -27,7 +24,6 @@ import { NucleoDocenteEstruturanteComponent } from './pages/coens/nucleo-docente
 import { ColegiadoComponent } from './pages/coens/colegiado/colegiado.component';
 
 const routes: Routes = [
-  {path: 'login', component: LoginComponent},
   {path: '', redirectTo: 'menu', pathMatch: 'full'},
   {path: 'menu', component: MenuComponent, children: [
     {path: '', component: InicioComponent},
@@ -38,32 +34,26 @@ const routes: Routes = [
       {path:'estagio-curricular', component: EstagioCurricularComponent},
       {path:'tcc', component: TccComponent},
       {path:'centro-academico', component: CentroAcademicoComponent},
-      {path:'internacionalizacao', component: InternacionalizacaoComponent},
+      {path:'internacionalizacao', component: InternacionalizacaoComponent}
     ]},
     {path: 'coens', children: [
+      {path: 'coordenacao', component: CoordenacaoComponent},
+      {path: 'docentes', component: DocentesComponent},
       {path: 'nucleo-docente', component: NucleoDocenteEstruturanteComponent},
-      {path: 'colegiado', component: ColegiadoComponent},
+      {path: 'colegiado', component: ColegiadoComponent}
     ]},
-    {path: 'noticias', children:[
-      {path:'', component:RecentesComponent},
-      {path:'meus-posts', component:MeusPostsComponent}
-    ]},
+    {path: 'noticias', component: NoticiasComponent},
     {path: 'atividades-producao', children: [
       {path: 'producao-academica', component: ProducaoAcademicaComponent},
       {path: 'projetos-extensao', component: ProjetosExtensaoComponent},
-      {path: 'grupos-de-pesquisa', component: GruposDePesquisaComponent},
+      {path: 'grupos-de-pesquisa', component: GruposDePesquisaComponent}
     ]},
     {path: 'outros', children: [
       {path: 'horario-calendario', component: HorarioCalendarioComponent},
       {path: 'legislacao', component: LegislacaoComponent},
       {path: 'logomarcas', component: LogomarcasComponent}
     ]},
-    {path: 'pos-graduacao', component: PosGraduacaoComponent},
-    {path: 'conheca', component: ConhecaOAlanComponent},
-    {path:'coens', children:[
-      {path:'docentes', component: DocentesComponent},
-      {path:'coordenacao', component: CoordenacaoComponent}
-    ]}
+    {path: 'pos-graduacao', component: PosGraduacaoComponent}
   ]},
 ];
 

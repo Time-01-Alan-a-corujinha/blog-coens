@@ -25,7 +25,8 @@ export class DocentesComponent implements OnInit {
           docentes: info.Professores,
           titulo: info.titulo
         }
-      },error:(err) =>{
+      }, 
+      error: (err) => {
         console.log(err)
       }
     })

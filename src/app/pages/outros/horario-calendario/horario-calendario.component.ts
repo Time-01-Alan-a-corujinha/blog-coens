@@ -32,6 +32,9 @@ export class HorarioCalendarioComponent implements OnInit {
           titulo: infos.titulo,
           listaHorarios: listaHorarios
         }
+      }, 
+      error: (err) => {
+        console.log(err)
       }
     })
   }

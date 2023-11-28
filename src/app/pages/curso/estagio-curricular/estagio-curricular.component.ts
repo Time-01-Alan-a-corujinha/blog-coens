@@ -52,6 +52,9 @@ export class EstagioCurricularComponent implements OnInit {
           emailUniversidade: infos.ProfessorResponsavelEstagio.emailUniversidade,
           linkDeAjuda: infos.ProfessorResponsavelEstagio.linkDeAjuda,
         }
+      }, 
+      error: (err) => {
+        console.log(err)
       }
     })
   }

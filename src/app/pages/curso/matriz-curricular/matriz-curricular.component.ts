@@ -35,6 +35,9 @@ export class MatrizCurricularComponent implements OnInit {
 
         this.dados.titulo = dados.data.attributes.titulo,
         this.dados.matrizesCurriculares = matrizes
+      }, 
+      error: (err) => {
+        console.log(err)
       }
     })
   }

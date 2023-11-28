@@ -28,6 +28,9 @@ export class CentroAcademicoComponent implements OnInit {
           linkImg: infos.logoCAES.data.attributes.url,
           diretoria: infos.Diretoria
         }
+      }, 
+      error: (err) => {
+        console.log(err)
       }
     })
   }

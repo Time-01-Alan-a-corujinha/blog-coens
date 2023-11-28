@@ -30,7 +30,8 @@ export class CoordenacaoComponent implements OnInit {
           atas: info.AtasDaCoordenacao,
           titulo: info.titulo
         }
-      },error:(err) => {
+      }, 
+      error: (err) => {
         console.log(err)
       }
     })

@@ -1,7 +1,8 @@
 <div class="p-3">
-    <div class="icones">
-        <button mat-button [matMenuTriggerFor]="menu" (mouseenter)="openMenu()" class="btn btn-block p-0"><mat-icon>menu</mat-icon></button>
-        <button mat-button [matMenuTriggerFor]="perfil" class="btn btn-block p-0"><mat-icon>person</mat-icon></button>
+    <div>
+        <button mat-button [matMenuTriggerFor]="menu" (mouseenter)="openMenu()" class="btn btn-block p-0">
+            <mat-icon>menu</mat-icon>
+        </button>
     </div>
     <div class="logos">
         <img src="assets/logo.png" alt="logo" style="width: 10vw; max-width: 65px;">
@@ -14,24 +15,12 @@
     <button mat-menu-item class="close-button"><mat-icon>close</mat-icon></button>
     <button mat-menu-item routerLink="">INÍCIO</button>
     <button mat-menu-item [matMenuTriggerFor]="curso">CURSO</button>
-    <button mat-menu-item [matMenuTriggerFor]="noticias">NOTÍCIAS</button>
+    <button mat-menu-item routerLink="noticias">NOTÍCIAS</button>
     <button mat-menu-item [matMenuTriggerFor]="coens">COENS</button>
     <button mat-menu-item routerLink="pos-graduacao">PÓS-GRADUAÇÃO</button>
     <button mat-menu-item [matMenuTriggerFor]="atividades">ATIVIDADES E PRODUÇÃO</button>
     <button mat-menu-item [matMenuTriggerFor]="sistemas">SISTEMAS</button>
     <button mat-menu-item [matMenuTriggerFor]="outros">OUTROS</button>
-    <button mat-menu-item routerLink="conheca">CONHEÇA O ALAN</button>
-</mat-menu>
-
-<mat-menu #noticias="matMenu" class="menu-box">
-    <button mat-menu-item routerLink="noticias">RECENTES</button>
-    <button mat-menu-item routerLink="noticias/meus-posts">MEUS POSTS</button>
-    <button mat-menu-item>ADMINISTRADOR</button>
-</mat-menu>
-
-<mat-menu #perfil="matMenu" class="menu-box">
-    <button mat-menu-item>MEU PERFIL</button>
-    <button mat-menu-item routerLink="../login">SAIR</button>
 </mat-menu>
 
 <mat-menu #curso="matMenu" class="menu-box">

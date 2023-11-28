@@ -26,6 +26,9 @@ export class LegislacaoComponent implements OnInit {
           link: infos.link,
           descricao: infos.descricao
         }
+      }, 
+      error: (err) => {
+        console.log(err)
       }
     })
   }
