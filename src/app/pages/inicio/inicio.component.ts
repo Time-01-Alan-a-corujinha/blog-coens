@@ -49,19 +49,14 @@ export class InicioComponent implements OnInit {
                 dataPublicacao: TextoUtils.converteData(noticia.attributes.publishedAt)
               })
             })
-            this.dados.noticias = listaNoticias
             this.dados.tituloNoticias = "Notícias mais recentes"
-
-            setTimeout(() => {
-              listaNoticias.forEach((noticia: any, i: number) => {
-                TextoUtils.preencheElementoDOM("conteudo" + i, TextoUtils.markDownParaHtml(noticia.conteudo));
-              });
-            }, 10);
+            this.dados.noticias = listaNoticias
           },
           error: (err: any) => {
             console.log(err)
           }
         })
+
       },
       error: (err) => {
         console.log(err)

@@ -52,11 +52,6 @@ export class NoticiasComponent extends MatPaginatorIntl {
           titulo: "Notícias",
           noticias: noticias
         }
-        setTimeout(() => {
-          noticias.forEach((noticia: any, i: number) => {
-            TextoUtils.preencheElementoDOM("conteudo"+i, TextoUtils.markDownParaHtml(noticia.conteudo));
-          });
-        }, 10);
       }, 
       error: (err: any) => {
         console.log(err)

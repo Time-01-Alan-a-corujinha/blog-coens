@@ -38,6 +38,12 @@
     }
 }
 
+.titulo {
+    font-family: 'Kreon', sans-serif;
+    font-weight: 600;
+    color: #841A1E;
+}
+
 iframe {
     width: 270px;
     height: 152px;
@@ -54,57 +60,5 @@ iframe {
     iframe {
         width: 800px;
         height: 450px;
-    }
-}
-
-.titulo {
-    font-family: 'Kreon', sans-serif;
-    font-weight: 600;
-}
-
-.titulo, ::ng-deep a, .subtitulo {
-    color: #841A1E;
-}
-
-::ng-deep a {
-    text-decoration: none;
-    font-weight: 500;
-}
-
-::ng-deep a:hover {
-    text-decoration: underline;
-}
-
-img {
-    height: fit-content;
-}
-
-p {
-    margin: 0;
-}
-
-.texto-e-data {
-    font-size: 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.data-publicacao {
-    font-family: 'Kreon', sans-serif;
-    font-size: medium;
-    text-align: end;
-}
-
-.informacoes {
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-}
-
-@media (max-width: 560px) {
-    .informacoes {
-        flex-direction: column;
-        align-items: center;
     }
 }
