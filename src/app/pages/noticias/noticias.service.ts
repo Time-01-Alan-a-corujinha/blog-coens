@@ -8,7 +8,7 @@ export class NoticiasService {
 
   constructor(private httpConfig: HttpConfigService) { }
 
-  getNoticias(paginacao?: number) {
-    return paginacao ? this.httpConfig.get("posts", `?pagination[page]=${paginacao}&pagination[pageSize]=5&populate=*`) : this.httpConfig.get("posts")
+  getNoticias(paginacao?: number, itensPorPagina: number = 5): any {
+    return paginacao ? this.httpConfig.get("posts", `?pagination[page]=${paginacao}&pagination[pageSize]=${itensPorPagina}&populate=*`) : this.httpConfig.get("posts")
   }
 }

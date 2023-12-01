@@ -1,4 +1,4 @@
-<div class="body spacer">
+<div class="body spacer" *ngIf="dados.noticias">
     <div class="conteudo-principal">
         <div id="texto"></div>
         <div class="video">
@@ -7,8 +7,24 @@
     </div>
     <hr>
     <div class="conteudo-secundario">
-        <div class="posts-recentes">
-
+        <div class="posts-recentes" *ngIf="dados.noticias">
+            <h2 class="titulo pb-2">{{dados.tituloNoticias}}</h2>
+            <div class="noticia" *ngFor="let noticia of dados.noticias; index as i; first as first; last as last">
+                <div>
+                    <h4 class="subtitulo pb-2">{{noticia.titulo}}</h4>
+                    <div class="informacoes">
+                        <div *ngIf="noticia.midia">
+                            <img src="{{noticia.midia.formats.thumbnail.url}}" alt="imagem-noticia">
+                        </div>
+                        <div class="texto-e-data">
+                            <p [id]="'conteudo'+i">{{noticia.conteudo}}</p>
+                            <p class="data-publicacao">{{noticia.dataPublicacao}}</p>
+                        </div>
+                    </div>
+                </div>
+                <hr *ngIf="!last">
+                <br *ngIf="last">
+            </div>
         </div>
         <div class="infos">
             <div *ngFor="let item of dados.barraLateral; last as last">

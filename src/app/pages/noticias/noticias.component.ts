@@ -58,7 +58,7 @@ export class NoticiasComponent extends MatPaginatorIntl {
           });
         }, 10);
       }, 
-      error: (err) => {
+      error: (err: any) => {
         console.log(err)
       }
     })
