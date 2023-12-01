@@ -8,7 +8,6 @@ import { InicioComponent } from './pages/inicio/inicio.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
-import { InputCustomComponent } from './components/input-custom/input-custom.component';
 import { NoticiasComponent } from './pages/noticias/noticias.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
@@ -36,13 +35,13 @@ import { ColegiadoComponent } from './pages/coens/colegiado/colegiado.component'
 import { LoadingComponent } from './components/loading/loading.component';
 import { LoadingInterceptor } from './components/loading/loading.interceptor';
 import { MatPaginatorModule, MatPaginatorIntl } from '@angular/material/paginator';
+import { NoticiaComponent } from './components/noticia/noticia.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InicioComponent,
     MenuComponent,
-    InputCustomComponent,
     NoticiasComponent,
     FooterComponent,
     SafePipePipe,
@@ -65,6 +64,7 @@ import { MatPaginatorModule, MatPaginatorIntl } from '@angular/material/paginato
     NucleoDocenteEstruturanteComponent,
     ColegiadoComponent,
     LoadingComponent,
+    NoticiaComponent,
   ],
   imports: [
     BrowserModule,
