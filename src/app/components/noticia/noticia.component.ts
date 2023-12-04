@@ -18,8 +18,10 @@ export class NoticiaComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  ngAfterViewInit() {
-    TextoUtils.preencheElementoDOM(this.idConteudo, TextoUtils.markDownParaHtml(this.conteudo));
+  ngOnChanges() {
+    setTimeout(() => {
+      TextoUtils.preencheElementoDOM(this.idConteudo, TextoUtils.markDownParaHtml(this.conteudo));
+    }, 10);
   }
 
 }
