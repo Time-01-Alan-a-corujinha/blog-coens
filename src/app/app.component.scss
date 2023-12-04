@@ -7,10 +7,6 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.spacer {
-    flex: 1;
-}
-
 .toolbar {
     position: absolute;
     top: 0;
@@ -34,5 +30,17 @@
 }
 
 ::ng-deep app-footer {
+    align-self: baseline;
     width: 100%;
+}
+
+::ng-deep app-menu {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+::ng-deep app-menu > :nth-child(3) {
+    flex: 1;
+    display: contents;
 }

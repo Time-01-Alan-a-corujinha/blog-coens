@@ -1,13 +1,15 @@
-<div *ngIf="gruposDePesquisa" class="px-5 spacer">
-  <h2 class="titulo pb-2">{{gruposDePesquisa.data.attributes.titulo}}</h2>
+<div class="px-5 spacer">
+  <h2 class="titulo pb-2" *ngIf="gruposDePesquisa">{{gruposDePesquisa.data.attributes.titulo}}</h2>
 
-  <div *ngFor="let grupo of gruposDePesquisa.data.attributes.GrupoDePesquisa; index as i; last as last">
-    <h4 class="subtitulo">{{grupo.nome}}</h4>
-    <p [id]="'descricao'+i"></p>
-    <a href="{{grupo.link}}" target="_blank">Saiba mais</a>
-    <hr *ngIf="!last">
+  <div *ngIf="gruposDePesquisa">
+    <div *ngFor="let grupo of gruposDePesquisa.data.attributes.GrupoDePesquisa; index as i; last as last">
+      <h4 class="subtitulo">{{grupo.nome}}</h4>
+      <p [id]="'descricao'+i"></p>
+      <a href="{{grupo.link}}" target="_blank">Saiba mais</a>
+      <hr *ngIf="!last">
+    </div>
+    <br>
   </div>
-  <br>
 </div>
 
 <app-footer></app-footer>

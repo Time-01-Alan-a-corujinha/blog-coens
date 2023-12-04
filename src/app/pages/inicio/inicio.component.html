@@ -1,13 +1,13 @@
-<div class="body spacer" *ngIf="dados.noticias">
-    <div class="conteudo-principal">
+<div class="body spacer">
+    <div class="conteudo-principal" *ngIf="dados.noticias">
         <div id="texto"></div>
         <div class="video">
             <iframe [src]="dados.videoInstitucionalLink | safeUrl"></iframe>
         </div>
     </div>
-    <hr>
-    <div class="conteudo-secundario">
-        <div class="posts-recentes" *ngIf="dados.noticias">
+    <hr *ngIf="dados.noticias">
+    <div class="conteudo-secundario" *ngIf="dados.noticias">
+        <div class="posts-recentes">
             <h2 class="titulo pb-2">{{dados.tituloNoticias}}</h2>
             <div class="noticia" *ngFor="let noticia of dados.noticias; index as i; first as first; last as last">
                 <app-noticia [titulo]="noticia.titulo" [midia]="noticia.midia" [conteudo]="noticia.conteudo"
